@@ -1,0 +1,31 @@
+<!--
+###Задача 1
+
+Напишите функцию sumArgs, которая суммирует все свои аргументы. При решении задачи используйте метод call или apply.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function sumArgs(){
+
+            var reduce = [].reduce;
+
+            var result=reduce.call(arguments,function(sum, current) {
+                return sum + current;
+            },0);
+
+            return result;
+
+        }
+
+       alert(sumArgs(10,20,21,2));
+    </script>
+</body>
+</html>

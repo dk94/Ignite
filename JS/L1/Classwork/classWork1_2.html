@@ -1,0 +1,26 @@
+<!--
+###Задача 2.
+Создайте функцию isEmpty(obj), которая возвращает true, если в объекте нет свойств и false – если хоть одно свойство есть.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        function isEmpty(object){
+            var counter=0;
+            for (element in object) {
+                counter++;
+            }
+            return counter>0?true:false;
+        }
+
+    </script>
+</body>
+</html>

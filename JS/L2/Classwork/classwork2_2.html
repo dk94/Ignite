@@ -1,0 +1,28 @@
+<!--
+###Задача 2.
+Напишите функцию, возвращающую количество собственных вызовов.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        function selfCounter(){
+            if(selfCounter.count==undefined) {
+                selfCounter.count = 1;
+                return selfCounter.count;
+            }
+            else
+                return ++selfCounter.count;
+
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!--###Задача 1.
+Создайте функцию find(arr, value), которая ищет в массиве arr значение value и возвращает его номер, если найдено, или -1, если не найдено.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        function find(arr,value){
+           var index=0;
+            arr.forEach(function (item, i){
+                if(item==value)
+                    index=i;
+            })
+            return index;
+        }
+
+        var array=[2,4,5,6,7,8];
+
+    </script>
+</body>
+</html>

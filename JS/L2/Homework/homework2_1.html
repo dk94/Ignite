@@ -1,0 +1,35 @@
+<!--
+###Задача 1.
+Напишите функцию, которая принимает 1 параметр.
+При первом вызове она его запоминает, при втором - суммирует переданный параметр с параметром, переданным при предыдущем вызове.
+
+Например:
+```
+sum(3) = 3
+sum(5) = 8
+sum(228) = 236
+```
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function sum(num){
+            if (sum.sum==undefined){
+                return sum.sum=num;
+            }
+            else
+           return sum.sum=sum.sum+num;
+        }
+        alert(sum(3));
+        alert(sum(5));
+        alert(sum(228));
+    </script>
+</body>
+</html>
