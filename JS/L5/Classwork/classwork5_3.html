@@ -1,0 +1,33 @@
+<!--
+###Задача 3
+Напишите функцию, которая принимает один аргумент и возвращает его тип данных.
+Выполните обработку исключений в случае передачи двух и больше аргументов.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        function typeOfData(arg){
+            try{
+                if(arguments.length==1)
+                    return typeof arg;
+                else throw new Error("Many arguments")
+            }
+            catch(e){
+
+                return e.message;
+            }
+        }
+
+        alert(typeOfData([]));
+        alert(typeOfData(1,2));
+    </script>
+</body>
+</html>
