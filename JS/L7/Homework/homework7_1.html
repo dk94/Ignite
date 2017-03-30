@@ -1,0 +1,47 @@
+<!--###Задача 1.
+
+Создайте страницу с 3 элементами div. Напишите сценарий, который будет произвольно менять положение этиъ элементов на странице каждую секунду.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+       .c1{background-color:red;}
+       .c2{background-color:green;}
+       .c3{background-color:blue;}
+        div{min-height: 200px;}
+    </style>
+</head>
+<body>
+<div class="c1">div1</div>
+<div class="c2">div2</div>
+<div class="c3">div3</div>
+<script>
+
+    setInterval(function(){
+        var elems=document.querySelectorAll("div");
+        document.body.innerHTML="";
+        var arr=[];
+       outer: while (true){
+            if (arr.length==3)
+            break;
+            var random=Math.floor(Math.random()*3);
+            for(var i=0;i<arr.length;i++){
+                if(arr[i]==random)
+                continue outer;
+            }
+           arr.push(random);
+
+
+        }
+        var frag=document.createDocumentFragment();
+        frag.appendChild(elems[arr[0]]);
+        frag.appendChild(elems[arr[1]]);
+        frag.appendChild(elems[arr[2]]);
+        document.body.appendChild(frag);
+    },1000);
+</script>
+</body>
+</html>
