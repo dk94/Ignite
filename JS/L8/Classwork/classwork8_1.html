@@ -1,0 +1,39 @@
+<!--
+###Задача 1.
+
+Создайте страницу. Разместите на странице 5 элементов div и кнопку. Создайте CSS файл, определите в файле правила, которые зададут всем дивам следующее оформление – высота и ширина 100 px, float=left и зеленый цвет фона.
+Создайте сценарий, который будет обрабатывать нажатие по кнопке и менять цвет одного из дивов на красный. Смена цвета должна происходить циклически, при первом нажатии первый div становиться красный остальные остаются зелеными, при нажатии на второй – все div становятся зелеными, а второй красный и т.д.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="classwork8_1.css">
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+<br>
+    <input type="button" value="Click me" onclick="makeRed()">
+
+    <script>
+       var counter=0;
+        function makeRed(){
+            var elements=document.querySelectorAll("div");
+           for(var i=0;i<elements.length;i++){
+               elements[i].style.backgroundColor="green";
+           }
+            elements[counter++].style.backgroundColor="red";
+            if(counter==elements.length)
+                counter=0;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!--###Задача 3.
+Создайте страницу с двумя полями ввода, кнопкой и элементом div с шириной и высотой 50px.
+Создайте сценарий, который по нажатию на кнопку будет перемещать div в координаты, указанные в полях ввода.
+В случае, если при нажатии кнопки хотя бы одно из полей ввода не заполнено, пользователь должен получить предупреждение,
+а событие click должно быть отменено.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    div{
+        width:50px;height:50px;
+        background-color: yellow;
+        position:absolute;
+    }
+</style>
+<body>
+Координата Х:
+<input type="text" class="inp1">
+Координата Y:
+<input type="text" class="inp2">
+<button>Переместить</button>
+<div>
+
+</div>
+<script>
+    document.querySelector("button").onclick=function(e){
+        var inp1=document.querySelector(".inp1");
+        var inp2=document.querySelector(".inp2");
+        if(!inp1.value||!inp2.value){
+        if(inp1.value==""){
+            inp1.value="Введите значение";
+
+        }
+            if(inp2.value==""){
+            inp2.value="Введите значение";
+
+        }
+            return false;
+        }
+        else{
+            document.querySelector("div").style.left=+inp1.value+"px";
+            document.querySelector("div").style.top=+inp2.value+"px";
+
+        }
+
+
+    }
+</script>
+</body>
+</html>

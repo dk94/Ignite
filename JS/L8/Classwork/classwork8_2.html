@@ -1,0 +1,29 @@
+<!--
+###Задача 2.
+
+Создайте страницу. Разместите на странице поле ввода, кнопку и пустой div.
+Создайте сценарий, который при нажатии на кнопку будет записывать содержимое поля ввода в пустой div.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+<input type="button" value="Click me" onclick="information()">
+<div></div>
+    <script>
+        function information(){
+            var div=document.querySelector("div");
+            var input=document.querySelector("input");
+            div.innerHTML=input.value;
+
+        }
+    </script>
+</body>
+</html>

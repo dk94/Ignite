@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+.circle{
+    border-radius: 50%;
+    background-color: red;
+    width:100px;
+    height:100px;
+    padding:10px;
+    position:absolute;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="circle">
+    <h1>
+Скидка
+    </h1>
+
+</div>
+
+<script>
+    window.onload=function(){
+        var div=document.querySelector(".circle");
+            div.style.left=document.documentElement.clientWidth/2+"px";
+            div.style.top=document.documentElement.clientHeight/2+"px";
+
+
+        document.onmousemove=function(e){
+
+            var coordX= e.pageX;
+            var coordY= e.pageY;
+           var difX=Math.abs(coordX-div.offsetLeft);
+            var difY=Math.abs(coordY-div.offsetTop);
+            var difXR=Math.abs(div.offsetLeft-coordX+div.clientWidth);
+            var difYR=Math.abs(div.offsetTop-coordY+div.clientHeight);
+            if((difX<=40&&difY<=40)||(difXR<=40&&difYR<=40)){
+              var arr=generate(div.offsetLeft,div.offsetTop);
+            div.style.left=arr[0]+"px";
+            div.style.top=arr[1]+"px";
+            }
+        }
+        function generate(coordX,coordY){
+           var arr=[];
+            var randomX=(Math.random())*600;
+            var randomY=(Math.random())*400;
+
+            /*if(finalX>=document.documentElement.clientWidth)
+            finalX=randomX;
+            else if(finalY>=document.documentElement.clientHeight)
+                finalY=randomY;*/
+            arr.push(randomX,randomY);
+            return arr;
+
+
+        }
+    }
+</script>
+</body>
+</html>
