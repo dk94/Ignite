@@ -13,28 +13,28 @@
     <title></title>
 </head>
 <style>
-    a{width:20px;height:20px;background-color: blue;position:absolute;}
-    div{width:200px;height:200px;background-color: darkorange;position:absolute;}
+    a{background-color: blue;}
+    div{width:20px;height:20px;background-color: darkorange;}
 </style>
 <body>
 
-
 <script>
     function positionAt(anchor, position, elem){
-        document.body.innerHTML="";
-        var anch=document.createElement(anchor);
-            var a=document.createElement(elem);
+            document.body.innerHTML="";
+            var a=document.createElement(anchor);
+            a.innerHTML="anchor";
+            var div=document.createElement(elem);
 
-            anch.appendChild(a);
-            document.body.appendChild(anch);
+
             switch (position){
-                case "top":{a.style.left=anch.clientWidth/2+"px";break;}
-                case "right":{a.style.top=anch.clientHeight/2+"px";a.style.right=0+"px";break;}
-                case "bottom":{a.style.left=anch.clientWidth/2+"px";a.style.bottom=0+"px";break;}
+                case "top":{document.body.appendChild(div);document.body.appendChild(a);break;}
+                case "right":{document.body.appendChild(a);document.body.appendChild(div);a.style.display="inline-block";
+                    div.style.display="inline-block";break;}
+                case "bottom":{document.body.appendChild(a);document.body.appendChild(div);break;}
             }
 
     }
-    positionAt("div", "bottom", "a");
+    positionAt("a", "right", "div");
 
 </script>
 </body>

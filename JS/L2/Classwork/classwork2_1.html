@@ -1,12 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+###Задача 1.
+Каков будет результат выполнения этого кода?
+```
+var value = 0;
+function f() {
+if (1) {
+value = true;
+} else {
+var value = false;
+}
+alert( value );
+}
+f();
+```
+Изменится ли внешняя переменная value ?
+Как изменится рузультат, если из строки var value = false убрать ключевое слово var?
 
-</head>
-<body>
+    В первом случае будет true, т.к. выполнится условие(1 - преобразуется в true). внешняя переменная не изменится, потому что
+до начала работы программы в локальной области функции будет создана локальная переменная value и при выполнении программы во
+время присвоения будет изменяться локальная переменная.
+    Если убрать var, результат будет таким же - true, но все манипуляции будут происходить с глобальной переменной(с свойством объекта
+window)
 
-</body>
-</html>
+

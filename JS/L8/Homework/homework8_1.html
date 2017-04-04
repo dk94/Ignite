@@ -1,10 +1,53 @@
+<!--
+###Задача 1.
+
+Создайте регистрационную форму:  логин, пароль, телефон и кнопка "Отправить".
+По нажатию на кнопку "Отправить", проверьте корректность ввода данных с помощью JavaScript.
+1) Логин - не должен содержать цифры.
+2) Пароль - не дожен содержать знак $.
+3) Телефон - должен содержать только цифры.
+
+Закрасьте фон поля ввода в красный цвет, если были введены неправильные данные.
+
+Используйте для решение данной задачи методы для работы со строками или регулярные выражения:
+[link](https://learn.javascript.ru/regexp-introduction)
+-->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Title</title>
 </head>
 <body>
+<form name="myForm" >
+    <input type="text" name="login" id="login" value="">
+    <input type="password" name="password" id="password">
+    <input type="text" id="tel">
+    <input type="submit">
+</form>
+    <script>
+        document.getElementsByName("myForm")[0].addEventListener("submit", makeSubmit);
+        function makeSubmit(e){
+            var login = document.getElementById("login");
+            var pswrd = document.getElementById("password");
+            var tel= document.getElementById("tel");
+            var checkLog=login.value.match(/[0-9]+/g);
+            var checkPaswrd=pswrd.value.match(/\$+/g);
+            var checkTel=tel.value.match(/[a-zA-Zа-яА-Я]+/g);
+            if(checkLog||checkPaswrd||checkTel){
+                if(checkLog)
+                login.style.backgroundColor="red";
+                if(checkPaswrd)
+                    pswrd.style.backgroundColor="red";
+                if(checkTel)
+                    tel.style.backgroundColor="red";
+                e.preventDefault();
+            }
 
+        }
+    </script>
 </body>
 </html>
