@@ -44,16 +44,28 @@
 
 </script>-->
 <!--Способ2-->
+Число 1:
 <input type="text" id="num1">
+Число 2:
 <input type="text" id="num2">
-<button>+</button>
-<button>-</button>
-<button>/</button>
-<button>/</button>
-<button>C</button>
+<button data-attr="+">+</button>
+<button data-attr="-">-</button>
+<button data-attr="*">*</button>
+<button data-attr="/">/</button>
+<button data-attr="C">C</button>
 <div id="div">0</div>
     <script>
-        document.body.addEventListener("click",)
+        document.body.addEventListener("click",function(e){
+            if(e.target.tagName!="BUTTON")
+            return;
+            switch(e.target.dataset.attr){
+                case "+":div.innerHTML=+num1.value+(+num2.value);break;
+                case "-":div.innerHTML=num1.value-num2.value;break;
+                case"*":div.innerHTML=num1.value*num2.value;break;
+                case"/":div.innerHTML=num1.value/num2.value;break;
+                default:div.innerHTML=0;num1.value="";num2.value="";break;
+            }
+        })
     </script>
 
 </body>
