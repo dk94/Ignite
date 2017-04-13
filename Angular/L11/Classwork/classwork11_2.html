@@ -1,0 +1,25 @@
+<!--### Задача2
+Создайте страницу с полем ввода и кнопкой. При нажатии на кнопку содержимое поля ввода должно отображаться на странице.-->
+<!DOCTYPE html >
+<html lang="en" ng-app="myFirstAngApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="..\..\angular.js"></script>
+    <script>
+
+        var myapp=angular.module("myFirstAngApp",[])
+                .controller("myFirstAngAppCtrl",function($scope){
+
+                    $scope.click=function(){
+                        $scope.message=$scope.text;
+                    }
+                })
+    </script>
+</head>
+<body ng-controller="myFirstAngAppCtrl">
+    <input ng-model="text">
+    <button ng-click="click()">Click</button>
+    <div>{{message}}</div>
+</body>
+</html>

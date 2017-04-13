@@ -1,0 +1,83 @@
+<!--### Задача2
+Добавьте в предыдущую задачу возможность пользователя редактировать задачи и сохранять результат после редактирования.-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp">
+<head>
+    <title>ToDo List (Task2)</title>
+    <meta charset="utf-8">
+    <script src="../../angular.js"></script>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script>
+        var model=[
+            {name:"Сделать домашнюю",description:"Домашнняя робота по lesson 11",date:new Date().getDate(),completed:false},
+            {name:"Пройти тест",description:"Тест по JS с Ignite",date:new Date().getDate(),completed:false},
+            {name:"Заняться спортом",description:"Сделать упражнения",date:new Date().getDate()+1,completed:false},
+            {name:"Убрать в квартире",description:"Поскладывать вещи",date:new Date().getDate()+2,completed:false}
+        ]
+        angular.module("myApp",[])
+                .controller("myAppCtrl",['$scope',function(scope){
+                    scope.data=model;
+
+
+
+                    scope.add=function(){
+                        scope.data.push({name:scope.name,description:scope.description,date:scope.date,completed:scope.completed});
+                        scope.name="";scope.description="";scope.date="";scope.completed="";
+
+                    }
+                    scope.edit=function(index){
+                        scope.data[index]={name:scope.newName,description:scope.newDescription,date:scope.newDate,
+                            completed:scope.newCompleted}
+                        scope.newName="";scope.newDescription="";scope.newDate="";scope.newCompleted="";
+                    }
+
+                }
+                ])
+
+    </script>
+
+</head>
+<body>
+
+<div class="container" ng-controller="myAppCtrl">
+
+    <h3>ToDo List</h3>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Completed</th>
+        </tr>
+        </thead>
+        <tr ng-repeat="work in data">
+            <td>{{work.name}}</td>
+            <td>{{work.description}}</td>
+            <td>{{work.date}}</td>
+            <td>{{work.completed}}</td>
+            <td><button class="btn" ng-click="edit($index)">Edit</button></td>
+        </tr>
+    </table>
+
+    <div>
+
+        <h2>Добавить задачу:</h2>
+        Название задачи:<input type="text" ng-model="name">
+        Описание задачи:<input type="text" ng-model="description">
+        Дата:<input type="text" ng-model="date">
+        Выполнена ли задача:<input type="checkbox" ng-model="completed" >
+        <button class="btn" ng-click="add()"> Добавить</button>
+        <h2>Редактировать задачу(после ввода нажмите edit напротив редактируемого поля):</h2>
+        Название задачи:<input type="text" ng-model="newName">
+        Описание задачи:<input type="text" ng-model="newDescription">
+        Дата:<input type="text" ng-model="newDate">
+        Выполнена ли задача:<input type="checkbox" ng-model="newCompleted" >
+
+
+    </div>
+</div>
+</body>
+</html>

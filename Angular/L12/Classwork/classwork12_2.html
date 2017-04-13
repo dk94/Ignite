@@ -1,0 +1,69 @@
+<!--###Задача 2
+Используйте таблицу с данными массива items из предыдущей задачи. Реализуйте следующее:
+
+* Добавьте на страницу 5 элементов checkbox с именами свойств элементов массива items(name, price и т.д.)
+* Нажатие на каждый из checkbox скрывает/отображает соответствующее свойство элементов массива items в таблице
+* Используйте директиву ng-switch-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <script>
+        angular.module("app",[])
+                .controller("myappCtrl",['$scope',function(scope){
+                    scope.items = [
+                        { name: "B Item", price: 10.9, category: "Category 1", count: 10, tax: 1.12, expiration: 10 },
+                        { name: "A Item", price: 1.1, category: "Category 1", count: 8, tax: 0.55, expiration: 12 },
+                        { name: "D Item", price: 2.6, category: "Category 2", count: 7, tax: 0.22, expiration: 5 },
+                        { name: "C Item", price: 17.5, category: "Category 2", count: 33, tax: 2.77, expiration: 10 }];
+
+                }
+
+                ])
+    </script>
+</head>
+
+
+<body ng-controller="myappCtrl">
+<div class="text-center">
+    name:
+    <input type="checkbox" ng-model="name" >
+    price:
+    <input type="checkbox" ng-model="price">
+    category:
+    <input type="checkbox" ng-model="category">
+    count:
+    <input type="checkbox" ng-model="count">
+    tax:
+    <input type="checkbox" ng-model="tax">
+    expiration:
+    <input type="checkbox" ng-model="expiration">
+</div>
+<table class="table">
+    <th>name</th>
+    <th>price</th>
+    <th>category</th>
+    <th>count</th>
+    <th>tax</th>
+    <th>expiration</th>
+
+    <tr ng-repeat="item in items">
+
+        <td ng-switch on="name"><span ng-switch-when="true">{{item.name}}</span></td>
+        <td ng-switch on="price"><span ng-switch-when="true">{{item.price}}</span></td>
+        <td ng-switch on="category"><span ng-switch-when="true">{{item.category}}</span></td>
+        <td ng-switch on="count"><span ng-switch-when="true">{{item.count}}</span></td>
+        <td ng-switch on="tax"><span ng-switch-when="true">{{item.tax}}</span></td>
+        <td ng-switch on="expiration"><span ng-switch-when="true">{{item.expiration}}</span></td>
+
+    </tr>
+
+</table>
+
+</body>
+</html>

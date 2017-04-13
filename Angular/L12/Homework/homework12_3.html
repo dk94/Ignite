@@ -1,0 +1,175 @@
+<!--
+###Задача 3
+Реализуйте SPA приложение, в котором пользователю представляется пройти тест из 5 вопросов, в каждом вопросе по 4 варианта ответа. Вопросы должны выбираться с помощью radio-button и когда выбран, например, вопрос №1, то на странице должны появится варианты ответа только для этого вопроса. В конце тестирования отобразите результат теста. При решении данной задачи используйте директиву ng-switch.
+-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <title></title>
+    <script>
+        var app = angular.module("myApp", []);
+
+        app.controller("mainCtrl", function ($scope) {
+            $scope.value="num1";
+            $scope.counter=0;
+            $scope.totalCounter=0;
+
+            $scope.answ1=function(){
+                $scope.btn1=true;
+                if($scope.answer=="ans3"){
+                    $scope.counter++;
+                    $scope.answer="";
+
+                }
+                $scope.totalCounter++;
+            }
+            $scope.answ2=function(){
+                $scope.btn2=true;
+                if($scope.answer=="ans2"){
+                    $scope.counter++;
+                    $scope.answer="";
+
+                }
+                $scope.totalCounter++;
+            }
+            $scope.answ3=function(){
+                $scope.btn3=true;
+                if($scope.answer=="ans4"){
+                    $scope.counter++;
+                    $scope.answer="";
+                }
+                $scope.totalCounter++;
+            }
+            $scope.answ4=function(){
+                $scope.btn4=true;
+                if($scope.answer=="ans2"){
+                    $scope.counter++;
+                    $scope.answer="";
+                }
+                $scope.totalCounter++;
+            }
+            $scope.answ5=function(){
+                $scope.btn5=true;
+                if($scope.answer=="ans1"){
+                    $scope.counter++;
+                    $scope.answer="";
+                }
+                $scope.totalCounter++;
+            }
+
+
+        })
+
+    </script>
+</head>
+<body ng-controller="mainCtrl">
+    <div class="row" class="">
+       <div class="col-xs-12"  >
+           <h2 class="text-center"><span>Вопросы</span></h2>
+           <div class="row" >
+               <div class="col-xs-6" style="margin-left:33%;float: none;">
+
+                   <label>
+                   Вопрос1
+                   <input type="radio" ng-model="value" name="question" value="num1">
+               </label>
+                   <label>
+                       Вопрос2
+                       <input type="radio" ng-model="value" name="question" value="num2">
+                   </label>
+                   <label>
+                       Вопрос3
+                       <input type="radio" ng-model="value" name="question" value="num3">
+                   </label>
+                   <label>
+                       Вопрос4
+                       <input type="radio" ng-model="value" name="question" value="num4">
+                   </label>
+                   <label>
+                       Вопрос5
+                       <input type="radio" ng-model="value" name="question" value="num5">
+                   </label>
+
+
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-xs-6" style="margin-left:26%; float: none;" ng-switch="value" ng-show="totalCounter<5">
+                    <div ng-switch-when="num1">
+
+                    </div>
+                   <div ng-switch-when="num1" class="text-center">
+                        <h3>В каком году вышла самая первая версия Angular?</h3>
+                        2005
+                        <input type="radio" ng-model="$parent.answer" name="answer" value="ans1"><br>
+                        2008
+                        <input type="radio" ng-model="$parent.answer" name="answer" value="ans2"><br>
+                        2009
+                        <input type="radio" ng-model="$parent.answer" name="answer" value="ans3"><br>
+                        2011
+                        <input type="radio" ng-model="$parent.answer" name="answer" value="ans4"><br>
+                        <input type="button" value="Ответить"   ng-click="answ1()" ng-disabled="btn1">
+                   </div>
+                   <div ng-switch-when="num2" class="text-center">
+                       <h3>Сколько в одном байте бит?</h3>
+                       7
+                       <input type="radio" ng-model="$parent.answer" name="answer" value="ans1"><br>
+                       8
+                       <input type="radio" ng-model="$parent.answer" name="answer" value="ans2"><br>
+                       9
+                       <input type="radio" ng-model="$parent.answer" name="answer" value="ans3"><br>
+                       10
+                       <input type="radio" ng-model="$parent.answer" name="answer" value="ans4"><br>
+                       <input type="button" value="Ответить"   ng-click="answ2()" ng-disabled="btn2">
+                   </div>
+                   <div ng-switch-when="num3" class="text-center">
+                       <h3>Что выведется на экран при вводе в консоль: alert(typeof null);</h3>
+                       "null"
+                       <input type="radio" ng-model="$parent.answer" name="answer" value="ans1"><br>
+                       "undefined"
+                       <input type="radio" ng-model="$parent.answer" name="answer" value="ans2"><br>
+                       "array"
+                       <input type="radio" ng-model="$parent.answer" name="answer" value="ans3"><br>
+                       "object"
+                       <input type="radio" ng-model="$parent.answer" name="answer" value="ans4"><br>
+                       <input type="button" value="Ответить"   ng-click="answ3()" ng-disabled="btn3">
+                   </div>
+                   <div ng-switch-when="num4" class="text-center">
+                       <h3>Как расшифровуется аббревиатура JSON?</h3>
+                       "Jason Statham Over Night"
+                       <input type="radio" ng-model="$parent.answer" name="answer" value="ans1"><br>
+                       "JavaScript Object Notation"
+                       <input type="radio" ng-model="$parent.answer" name="answer" value="ans2"><br>
+                       "JavaScript Our Nation"
+                       <input type="radio" ng-model="$parent.answer" name="answer" value="ans3"><br>
+                       "Java SE Object Notation"
+                       <input type="radio" ng-model="$parent.answer" name="answer" value="ans4"><br>
+                       <input type="button" value="Ответить"   ng-click="answ4()" ng-disabled="btn4">
+                   </div>
+                   <div ng-switch-when="num5" class="text-center">
+                       <h3>Столица Мадагаскара:</h3>
+                       Антананариву
+                       <input type="radio" ng-model="$parent.answer" name="answer" value="ans1"><br>
+                       Луанда
+                       <input type="radio" ng-model="$parent.answer" name="answer" value="ans2"><br>
+                       Каир
+                       <input type="radio" ng-model="$parent.answer" name="answer" value="ans3"><br>
+                       Найроби
+                       <input type="radio" ng-model="$parent.answer" name="answer" value="ans4"><br>
+                       <input type="button" value="Ответить"   ng-click="answ5()" ng-disabled="btn5">
+                   </div>
+
+                   </div>
+               <div class="col-xs-6" style="margin-left:40%; float: none;" ng-show="totalCounter==5">
+                   <h2>Ваш результат: {{counter}}</h2>
+               </div>
+           </div>
+       </div>
+    </div>
+</body>
+</html>

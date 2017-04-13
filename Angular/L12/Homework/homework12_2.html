@@ -1,0 +1,68 @@
+<!--###Задача 2
+Дано массив items:
+```
+$scope.items = [
+{ name: "B Item", price: 10.9, category: "Category 1", count: 10, tax: 1.12, expiration: 10 },
+{ name: "A Item", price: 1.1, category: "Category 1", count: 8, tax: 0.55, expiration: 12 },
+{ name: "D Item", price: 2.6, category: "Category 2", count: 7, tax: 0.22, expiration: 5 },
+{ name: "C Item", price: 17.5, category: "Category 2", count: 33, tax: 2.77, expiration: 10 }];
+```
+Создайте страницу с элементом select. Реализуйте следующее:
+В зависимости от выбранного варианта в списке select, на экране отображаются данные массива или в виде таблицы, или в виде списка-->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+
+
+</head>
+    <script>
+    var app = angular.module("myApp", []);
+
+    app.controller("mainCtrl", function ($scope) {
+        $scope.items = [
+            { name: "B Item", price: 10.9, category: "Category 1", count: 10, tax: 1.12, expiration: 10 },
+            { name: "A Item", price: 1.1, category: "Category 1", count: 8, tax: 0.55, expiration: 12 },
+            { name: "D Item", price: 2.6, category: "Category 2", count: 7, tax: 0.22, expiration: 5 },
+            { name: "C Item", price: 17.5, category: "Category 2", count: 33, tax: 2.77, expiration: 10 }];
+        $scope.options = [{ display: 'Таблица', value: 'table' }, { display: 'Список', value: 'list' }];
+        $scope.selected = $scope.options[0];
+    });
+    </script>
+
+</head>
+<body ng-controller="mainCtrl">
+
+        <div class="row">
+
+        <div class="col-xs-5" style="margin:0 auto;float:none">
+           <h2> Выберете вариант отображения:</h2>
+        <select ng-model="selected" ng-options="option.display for option in options track by option.value" class="form-control"></select>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12" ng-switch="selected.value" style="margin-top:50px">
+                <table ng-switch-when="table" class="table">
+                    <tr ng-repeat="item in items">
+                        <td>{{item.name}}</td>
+                        <td>{{item.price}}</td>
+                        <td>{{item.category}}</td>
+                        <td>{{item.count}}</td>
+                        <td>{{item.tax}}</td>
+                        <td>{{item.expiration}}</td>
+                    </tr>
+
+                </table>
+                <ul ng-switch-when="list" class="text-center">
+                    <li ng-repeat="item in items" class="list-unstyled">{{item.name}} {{item.price}}
+                    {{item.category}} {{item.count}} {{item.tax}} {{item.expiration}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+</body>
+</html>

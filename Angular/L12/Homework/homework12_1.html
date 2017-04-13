@@ -1,0 +1,51 @@
+<!--
+###Задача 1
+Создайте приложение-калькулятор. В приложении должно быть два поля ввода и кнопки «+», «-», «*», «/». Реализуйте двунаправленную привязку таким образом, чтобы при нажатии на кнопки результат арифметических операций выводился на странице.
+-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <script>
+        angular.module("app",[])
+                .controller("appCtrl",["$scope",function(scope){
+                    scope.plus=function(){
+                        scope.output=+scope.input1+(+scope.input2);
+                    }
+                    scope.minus=function(){
+                        scope.output=scope.input1-scope.input2;
+                    }
+                    scope.divide=function(){
+                        scope.output=scope.input1/scope.input2;
+                    }
+                    scope.mult=function(){
+                        scope.output=scope.input1*scope.input2;
+                    }
+                    scope.reset=function(){
+                        scope.input1=""
+                        scope.input2="";
+                        scope.output="";
+                    }
+
+                }])
+
+    </script>
+<body>
+         <div class="text-center" ng-controller="appCtrl">
+
+             <input class="input-lg" placeholder="Поле для ввода 1" ng-model="input1">
+             <button class="btn" ng-click="plus()">+</button>
+             <button class="btn" ng-click="minus()">-</button>
+             <button class="btn" ng-click="divide()">/</button>
+             <button class="btn" ng-click="mult()" >*</button>
+             <button class="btn" ng-click="reset()" >C</button>
+             <input class="input-lg" placeholder="Поле для ввода 2" ng-model="input2">
+             <h2>={{output}}</h2>
+         </div>
+</body>
+</html>
