@@ -1,10 +1,45 @@
+<!--###Задача1
+Создайте страницу с элементом div и кнопкой. Реализуйте следующее:
+При нажатии на кнопку элементу div присваиваются 2 CSS-класса-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <style>
+        .cls1{
+            border-radius:50%;
+
+            margin:0 auto;
+        }
+        .cls2{
+            width:50%;
+        }
+        #wraper{
+            margin:auto;
+        }
+    </style>
+    <script>
+        angular.module("app",[])
+                .controller("appCtrl",["$scope",function(scope){
+                    scope.attachClass=function(){
+                        scope.className="cls1 cls2";
+                    }
+
+                }])
+
+    </script>
 </head>
 <body>
-
+    <div id="wraper" class="text-center" ng-controller="appCtrl">
+        <div style="min-height:100px; background-color: red;" ng-class="className"></div>
+        <br>
+        <div>
+        <button class="btn-lg" ng-click="attachClass()" >Click me</button>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,68 @@
+<!--
+###Задача 2
+Создайте страницу с десятью тегами div с текстом, полем ввода и кнопкой.
+Добавьте фильтр, который при вводе значения в поле и после нажатия на кнопку, покажет пользователю только те блоки,
+текст в которых соответствуют введеному значению. Остальные блоки должны быть скрыты.
+-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+</head>
+
+<style>
+    div{width:70%;margin: 0 auto;padding: 0;}
+</style>
+<script>
+    var model=[{name:"div1",text:"Создайте страницу"},
+        {name:"div2",text:"с десятью тегами"},
+        {name:"div3",text:"div с текстом"},
+        {name:"div4",text:"полем ввода и кнопкой"},
+        {name:"div5",text:"Добавьте фильтр"},
+        {name:"div6",text:"Добавьте фильтр"},
+        {name:"div7",text:"Добавьте фильтр"},
+        {name:"div8",text:"и после нажатия на кнопку"},
+        {name:"div9",text:"только те блоки"},
+        {name:"div10",text:"только те блоки"}
+
+
+
+    ]
+    angular.module("app",[])
+
+            .controller("appCtrl",['$scope',function(scope) {
+
+                scope.items=model;
+                scope.strFind="";
+                scope.filter=function(){
+                    scope.strFind=scope.value;
+                }
+
+
+            }])
+            .filter("foundDivs",function(){
+                return function(arr,value){
+                    for(var i=0;i<arr.length;i++){
+                        if(arr[i].text!=value &&value!="" )
+                        arr.splice(i,1);
+                    }
+                    return arr;
+                }
+            })
+</script>
+<body ng-controller="appCtrl">
+    <div class="well" ng-repeat="item in items|foundDivs:strFind">
+        <h4>{{item.name}}</h4>
+        <span>{{item.text}}</span>
+    </div>
+    <div>
+    <input type="text" class="input-lg" ng-model="value">
+    <button class="btn" ng-click="filter()">Filter</button>
+    </div>
+</body>
+</html>

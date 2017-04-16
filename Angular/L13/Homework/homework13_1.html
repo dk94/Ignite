@@ -1,0 +1,59 @@
+<!--###Задача 1
+Создайте три разных CSS класса, которые по-разному будут оформлять блок текста на странице.
+Реализуйте возможность выбирать стиль для оформления страницы с помощью кнопок или checkbox-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <style>
+
+
+
+        .cls1{
+            text-align:center;
+
+            font-size: large;
+        }
+        .cls2{
+            border:2px solid yellow;
+
+        }
+        .cls3{
+            color:red;
+        }
+
+    </style>
+    <script>
+        angular.module("app",[])
+                .controller("appCtrl",['$scope',function(scope) {
+                    scope.className={
+                        cls1:false,
+                        cls2:false,
+                        cls3:false
+                    };
+
+
+                }])
+    </script>
+</head>
+<body ng-controller="appCtrl">
+    <div id="wraper">
+        <div ng-class="className">
+            ЛАЛАЛАЛАЛАЛАЛАЛАЛАЛАЛ
+        </div>
+        <div style="margin: 0 auto; width:30%">
+        Large text center:
+
+        <input type="checkbox" name="check1" ng-model="className.cls1" value="true">
+        Border:
+        <input type="checkbox" name="check2" ng-model="className.cls2" value="true">
+        Red Color:
+        <input type="checkbox" name="check3" ng-model="className.cls3" value="true">
+        </div>
+    </div>
+</body>
+</html>
