@@ -1,0 +1,50 @@
+<!--###Задача 2
+Создайте сервис из предыдущей задачи, используя метод провайдера.-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <script>
+        angular.module("app",[])
+
+                .controller("appCtrl",['$scope','counterLogger',function(scope,counterLogger) {
+
+                    scope.click=function(){
+                        counterLogger();
+                    }
+                }])
+                .provider("counterLogger",function(){
+                    var limit = null;
+                    return {
+
+                        setCounterLimit:function(setting,value){
+                            if(setting==true)
+                            limit=value;
+                        },
+
+                        $get: function () {
+                        var counter = 1;
+                            return function(){
+                                if(limit && counter < limit || limit == null)
+                                console.log("Click: " + counter++);
+
+                            }
+                    }
+                }
+                })
+                .config(function(counterLoggerProvider){
+                    counterLoggerProvider.setCounterLimit(true,10);
+        })
+    </script>
+</head>
+<body>
+<div class="text-center" ng-controller="appCtrl">
+    <h2>Click me</h2>
+    <button ng-click="click()" class="btn">Click</button>
+</div>
+</body>
+</html>

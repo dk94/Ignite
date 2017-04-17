@@ -1,0 +1,38 @@
+
+<!--###Задача 1
+Создайте страницу с кнопкой. Разработайте сервис, который будет считать количество кликов по кнопке и выводить его в консоль.
+Используйте фабричную функцию для создания сервиса.-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <script>
+    angular.module("app",[])
+
+    .controller("appCtrl",['$scope','counterLogger',function(scope,counterLogger) {
+
+               scope.click=function(){
+                   counterLogger();
+               }
+            }])
+            .factory("counterLogger",function(){
+                var counter=1;
+                return function(){
+                console.log("Click: "+counter++);
+
+
+                }
+            })
+    </script>
+</head>
+<body>
+    <div class="text-center" ng-controller="appCtrl">
+        <h2>Click me</h2>
+        <button ng-click="click()" class="btn">Click</button>
+    </div>
+</body>
+</html>
