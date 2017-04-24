@@ -1,0 +1,53 @@
+<!--Задача 2
+
+Создайте страницу с произвольным количеством блоков текста с заголовками.
+Создайте список заголовков вверху страницы. Используя сервис $anchorScroll, реализуйте навигацию на странице.
+При нажатии на заголовок в списке вверху страницы, страница должна быть автоматически прокручена до блока текста с соответствующим
+заголовком.-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <style>
+        ul{
+            cursor:pointer;
+
+        }
+
+        .well{
+            min-height:300px;
+        }
+    </style>
+    <script>
+        angular.module("app",[])
+
+                .controller("appCtrl",['$scope','$anchorScroll', '$location',function(scope,$anchorScroll, $location) {
+                    $location.hash("top");
+                    scope.items=[];
+                    for(var i=1;i<31;i++){
+                        scope.items.push({id:"item"+i,name:"div"+i});
+
+
+                    }
+
+                    scope.show=function(id){
+                        $location.hash(id);
+                    }
+
+                }])
+
+    </script>
+</head>
+<body ng-controller="appCtrl">
+<ul class="list-inline" id="top"><li ng-repeat="item in items" class="list-group-item-info" ng-click="show(item.id)">{{item.name}}</li></ul>
+<div ng-repeat="item in items" class="well" id="{{item.id}}">
+    {{item.name}}
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!--###Задача 1
+Создайте страницу с двумя ссылками view1 и view2. Реализуйте переключение view между view1 и view2 при клике по
+ссылкам. Файлы для задачи находятся в папке Task-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <script src="..\..\angular_route.js"></script>
+    <style>
+
+    </style>
+    <script>
+        angular.module("app",['ngRoute'])
+
+                .config(function($routeProvider){
+
+                    $routeProvider
+
+                            .when('/sampleView1', {
+                                templateUrl: 'Task/view1.html',
+                            })
+                            .when('/sampleView2', {
+                                templateUrl: 'Task/view2.html'
+                            })
+
+                })
+
+    </script>
+</head>
+<body>
+    <div class="well text-center">
+        <ul class="nav nav-tabs">
+            <li><a href="#/sampleView1">View1</a></li>
+            <li><a href="#/sampleView2">View2</a></li>
+        </ul>
+    </div>
+    <div ng-view class="text-center"></div>
+</body>
+</html>

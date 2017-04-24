@@ -1,0 +1,85 @@
+<!--###Задача 3
+Создайте директиву для генерации меню.
+В качестве источника данных директива должна использовать массив объектов, одно из свойств объекта должено содержать текст элемента меню,
+второе свойство должно использоватся для определения адреса перехода при клике по элементу меню.-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<link href="../../bootstrap.css" rel="stylesheet" />
+<link href="../../bootstrap-theme.css" rel="stylesheet" />
+<script src="..\..\angular.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<style>
+
+    body>div.container-fluid{
+        padding:0;
+    }
+    header nav{min-height:80px;
+        background-color: rgba(140, 136, 138, 0.4);
+    }
+    header .navbar-nav{
+        padding-top:8px;
+    }
+
+    body{overflow-x: hidden;}
+    header .mainMenu li{list-style-type: square;
+        color:yellow;
+        padding:0;
+        margin-right:20%;
+    }
+    header .mainMenu li a{
+        color:white!important;
+        font-size: 15px;
+        cursor: pointer;}
+    header .mainMenu li a:hover{
+        color:yellow!important;
+    }
+
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        angular.module("app",[])
+                .controller("mainCtrl",function($scope){
+                    $scope.data= [{text:"Home",href:"#home"},
+                                  {text:"About",href:"#about"},
+                                  {text:"Works",href:"#works"},
+                                  {text:"Clients",href:"#clients"},
+                                  {text:"Contact",href:"#contact"}
+
+                    ];
+
+
+
+
+                })
+                .directive("menuGenerate",function(){
+                    return {
+                        templateUrl:"page/menu.html",
+                        restrict:"A",
+                        link:function(scope,element,attr){
+                            scope.source=scope.data;
+                        }
+
+
+
+                    }
+
+                })
+    </script>
+</head>
+<body ng-controller="mainCtrl">
+<div class="container-fluid" >
+    <header menu-generate>
+
+    </header>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!--###Задача 1
+Есть массив items:
+```
+[
+{ name: "Table", price: 44.10 },
+{ name: "Chair", price: 21.20 },
+{ name: "Pillow", price: 12.20 },
+{ name: "Picture", price: 112.70 },
+{ name: "Lamp", price: 28.31 }
+];
+```
+Создайте две директивы. Первая создает панель меню с элементами, взятыми из свойства name массива items.
+Вторая директива реализует следующее:
+* при клике по элементу на панели меню, пользователю показывается соответственный контент, взятый из свойства price массива items.
+Директивы используют общий контроллер.-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <script>
+        angular.module("app",[])
+                .controller("mainCtrl",function($scope){
+
+            $scope.items=[
+                { name: "Table", price: 44.10 },
+                { name: "Chair", price: 21.20 },
+                { name: "Pillow", price: 12.20 },
+                { name: "Picture", price: 112.70 },
+                { name: "Lamp", price: 28.31 }
+            ];
+
+                    $scope.click=function(i){
+                        $scope.output=$scope.items[i].price;
+                    }
+        })
+
+                .directive("menuDirective",function(){
+                    return {
+                        restrict:"E",
+                        templateUrl:"component/menu.html",
+                        link: function (scope, elem, attrs) {
+                            scope.data=scope.items;
+                        }
+
+                    }
+                })
+                .directive("outputDirective",function($compile) {
+                            return {
+                                restrict: 'A',
+                                link: function (scope, elem, attrs) {
+                                    elem.append(angular.element($compile("<h2>{{output|currency}}</h2>")(scope)));
+                                }
+                            }
+                        })
+
+
+    </script>
+</head>
+<body ng-controller="mainCtrl">
+<div>
+    <menu-directive output-directive></menu-directive>
+
+</div>
+</body>
+</html>

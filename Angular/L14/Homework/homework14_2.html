@@ -1,0 +1,67 @@
+<!--###Задача 2
+Создайте приложение с интерфейсом показанном в файле template.png. Файл находится в папке Task.
+Напишите сервис, который после каждого изменения формы, будет создавать JSON обьект с новыми данными и отправлять на сервер.
+Выведите подготовленный к отправке объект на экран.-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <title></title>
+    <script>
+        angular.module("app",[])
+                .controller("appCtrl",['$scope','$http','convertSendService',function(scope,$http,convertSendService){
+                    scope.items=[
+                        {name:"Купить молоко",description:"Сходить на рынок и купить молоко",date:new Date().getDate(),completed:false}
+                     ]
+                    scope.send=function(){
+                        scope.items.push(scope.obj);
+                        convertSendService.convertSend(scope.obj);
+                    }
+                }])
+                .service("convertSendService",function($http){
+                    return {
+                        convertSend:function(obj){
+                            var json=angular.toJson(obj);
+
+                            $http.post("#",json);
+                        }
+                    }
+                })
+
+
+    </script>
+</head>
+<body ng-controller="appCtrl">
+
+<h2>ToDoList</h2>
+    <table class="table">
+        <th>Name</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Completed</th>
+        <tr ng-repeat="item in items">
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.date}}</td>
+            <td>{{item.completed}}</td>
+        </tr>
+
+
+    </table>
+    <div class="well text-center">
+        <label><strong>Name</strong></label><br>
+        <input type="text" class="input-lg" ng-model="obj.name"><br>
+        <label><strong>Due Date</strong></label><br>
+        <input type="text" class="input-lg" ng-model="obj.date"><br>
+        <label><strong>Description</strong></label><br>
+        <textarea class="input-lg" ng-model="obj.description" style="width:40%"></textarea><br>
+        <label><strong>Completed</strong></label><br>
+        <input type="checkbox" ng-model="obj.completed"><br>
+        <button class="btn-success btn-lg" ng-click="send()">Add</button>
+
+    </div>
+</body>
+</html>

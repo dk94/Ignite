@@ -1,0 +1,85 @@
+<!--###Задача 2
+Создайте две директивы. Первая создает список ul с произвольным количеством элементов.
+Вторая директива добавляет четным элементам списка CSS класс ‘red’ со следующим значением:
+```
+.red {
+color: red
+}
+```
+Обе директивы используются в качестве атрибутов и применяются к одному и тому же элементу.
+При решении задачи используйте приоритет директив.-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <style>
+        .red {
+            color: red
+        }
+    </style>
+    <script>
+        angular.module("app",[])
+                .controller("mainCtrl",function($scope){
+
+                    $scope.items=[
+                        { name: "Table"},
+                        { name: "Chair" },
+                        { name: "Pillow"},
+                        { name: "Picture" },
+                        { name: "Lamp" },
+                        { name: "Desk" },
+                        { name: "TV" },
+                        { name: "Oven" }
+                    ];
+
+
+                })
+
+                .directive("listDirective",function(){
+                    return {
+                        restrict:"A",
+                        link: function (scope, elem, attrs) {
+                            var data=scope.items;
+
+                           var ul= angular.element("<ul class='list-unstyled'>");
+
+                            for (var i=0;i<data.length;i++){
+                                var li=angular.element("<li>"+data[i].name+"</li>");
+                                ul.append(li);
+                            }
+
+                            elem.append(ul);
+                        },
+                        priority:1
+
+                    }
+                })
+                .directive("cssDirective",function() {
+                    return {
+                        restrict: 'A',
+                        link: function (scope, elem, attrs) {
+                           var li=elem.find("li");
+                            for(var i=0;i<li.length;i++){
+                                if(i%2==0)
+                                    li.eq(i).addClass("red");
+                                else
+                                        continue;
+                            }
+                        },
+                        priority:10
+                    }
+                })
+
+
+    </script>
+</head>
+<body ng-controller="mainCtrl">
+<div class="text-center">
+    <h2>List</h2>
+    <div list-directive css-directive ></div>
+</div>
+</body>
+</html>

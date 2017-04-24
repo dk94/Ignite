@@ -1,0 +1,49 @@
+
+<!--
+###Задача 2
+Создайте директиву, которая на основе массива будет создавать определенное количество параграфов:
+1) генерация должна происходить не с помощью jqLite, а с помощью шаблона,
+2) директиву можно применить только как атрибут,
+3) сгенерированный контент должен полностью заменить собой элемент, к которому применяется директива,
+4) у неё должен быть независимый scope.
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<link href="../../bootstrap.css" rel="stylesheet" />
+<link href="../../bootstrap-theme.css" rel="stylesheet" />
+<script src="..\..\angular.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        angular.module("app",[])
+                .controller("mainCtrl",function($scope){
+                    $scope.data= [
+                        "Создайте директиву, которая на основе массива будет создавать определенное количество параграфов:",
+                        "1) генерация должна происходить не с помощью jqLite, а с помощью шаблона,",
+                        "2) директиву можно применить только как атрибут,",
+                        "3) сгенерированный контент должен полностью заменить собой элемент, к которому применяется директива,"];
+
+
+
+
+                })
+                .directive("paragrahGenerate",function(){
+                    return {
+                        template:"<p>{{item}}</p>",
+                        restrict:"A",
+                        scope:{item:"=source"},
+                        replace:true
+
+                    }
+
+                })
+    </script>
+</head>
+<body ng-controller="mainCtrl">
+
+<div class="well text-primary text-center">
+<div paragrah-generate ng-repeat="item in data" source="item"></div>
+</div>
+</body>
+</html>

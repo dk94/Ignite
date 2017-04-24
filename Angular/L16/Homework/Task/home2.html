@@ -1,0 +1,10 @@
+﻿<form name="contactForm">
+ <label>username:   <input type="text" class="input-lg" name="userName"/></label>
+ <label>age:   <input type="text" class="input-lg" name="age" /></label>
+ <label>email: <input type="email" class="input-lg" name="userEmail" /></label>
+    <label>employed: <input type="checkbox" name="employed"></label>
+</form>
+ <h1>List of names</h1>
+<ul  class="list-group-item-success list-inline" >
+    <li ng-repeat="person in people" class="list-group-item-danger" ng-click="click(person)">{{person.name}}</li>
+</ul>

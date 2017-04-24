@@ -1,0 +1,62 @@
+<!--###Задача 2
+Добавьте в код предыдущей задачи путь, который будет использоваться по умолчанию и поддержку режима html5Mode-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <script src="..\..\angular_route.js"></script>
+    <style>
+        a{cursor: pointer;}
+    </style>
+    <script>
+        angular.module("app",['ngRoute'])
+
+                .config(function($routeProvider,$locationProvider){
+
+                    $routeProvider
+
+                            .when('/sampleView1', {
+                                templateUrl: 'Ignite/Angular/L16/Classwork/Task/view1.html',
+                            })
+                            .when('/sampleView2', {
+                                templateUrl: 'Ignite/Angular/L16/Classwork/Task/view2.html',
+                            })
+                            .otherwise({
+                                redirectTo: 'Ignite/Angular/L16/Classwork/Task/view1.html'
+                            })
+
+                    $locationProvider.html5Mode({
+                        enabled: true,
+                        requireBase: false
+                    });
+
+
+                })
+
+                .controller("appCtrl",function($scope,$location){
+
+                    $scope.clickView1=function(){
+                        $location.path("/sampleView1");
+                    }
+                    $scope.clickView2=function(){
+                        $location.path("/sampleView2");
+                    }
+                })
+
+    </script>
+</head>
+<body>
+<div class="well text-center" ng-controller="appCtrl">
+    <ul class="nav nav-tabs">
+        <li><a ng-click="clickView1()">View1</a></li>
+        <li><a ng-click="clickView2()">View2</a></li>
+    </ul>
+</div>
+<div ng-view class="text-center"></div>
+{{output}}
+</body>
+</html>

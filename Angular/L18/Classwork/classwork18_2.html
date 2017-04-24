@@ -1,0 +1,66 @@
+<!--### Задача 2
+Добавьте в код предыдущей задачи еще одну директиву, которая будет выводить значение переменной счетчика в консоль.
+Организуйте код так, чтобы обе директивы использовали один и тот же контроллер. Используйте свойство require.-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <script>
+        angular.module("app",[])
+
+                .directive("timerDirective",function(){
+                    return {
+                        restrict:"A,E",
+                        scope: true,
+                        template:"<button ng-click='start()' class='btn-lg btn-success'>Start</button>" +
+                        "<h2>{{counter}}</h2>",
+
+                        controller:function($scope,$interval){
+
+                            $scope.counter=0;
+                            $scope.start=function(){
+                                if($scope.int!=undefined)
+                                    return;
+                                $scope.counter=1;
+                                $scope.int=$interval(function(){
+                                            ++$scope.counter;
+                                        },1000
+                                )
+
+                            };
+                            this.log=function(){
+                                $interval(function(){
+                                            if($scope.counter==0)
+                                            return;
+                                            console.log($scope.counter);
+                                        },1000
+                                )
+
+                            }
+                        }
+                    }
+                })
+                .directive("timerLogDirective",function(){
+                    return {
+                        restrict: 'A',
+                        //указываем, что для работы данной директивы необходимо использовать контроллер директивы firstDir
+                        require: 'timerDirective',
+                        //передаем link function в качестве 4 агрумента контроллер первой директивы
+                        link: function (scope, elem, attrs, firstDirCtrl) {
+                            firstDirCtrl.log();
+                        }
+                    }
+                })
+
+    </script>
+</head>
+<body>
+<div class="well text-center">
+    <timer-directive timer-log-directive></timer-directive>
+
+</div>
+</body>
+</html>

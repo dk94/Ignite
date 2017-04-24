@@ -1,0 +1,42 @@
+<!--Задача 2
+
+Используя сервис $interpolate выведите имя в шаблоне жирным начертанием используя тег strong:
+
+"Hello my name is {{name}}"
+var data = { name: "<strong>Ivan</strong>" }-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <style>
+
+    </style>
+    <script>
+        angular.module("app",[])
+
+                .controller("mainCtrl", function ($scope, $interpolate) {
+
+                    var expr = "My name is {{name}}";
+                    var model = { name: "<strong>Ivan</strong>"};
+
+                    $scope.interpolateExpression = function () {
+                        angular.element(document.getElementById("par")).html($interpolate(expr)(model));
+
+
+                    }
+
+                });
+
+    </script>
+</head>
+<body ng-controller="mainCtrl" class="text-center">
+<button ng-click="interpolateExpression()">$interpolate</button>
+    <p id="par"></p>
+
+
+</body>
+</html>

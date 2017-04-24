@@ -1,0 +1,47 @@
+
+<!--###Задача 2
+Создайте директиву, которая создает форму и добавляет ее на страницу. В форме должны быть следующие поля:
+Username, login, password, email.-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+
+    <script>
+        angular.module("app",[])
+                .controller("mainCtrl",function($scope){
+                    $scope.data=[{name:"username",type:"text"},
+                        {name:"login",type:"text"},
+                        {name:"password",type:"password"},
+                        {name:"email",type:"email"}
+
+                    ]
+
+                })
+                .directive("formGenerate",function($compile){
+                    return function(scope,elem,attr){
+                        var source=scope[attr.formGenerate];
+                        var form=angular.element("<form class='form-group'>");
+
+                       for(var i=0;i<source.length;i++){
+                           var span=angular.element($compile("<span>"+source[i].name.slice(0,1).toUpperCase()+source[i].name.slice(1)+": </span><br>")(scope));
+                           var input=angular.element($compile("<input type="+source[i].type+" name="+source[i].name+" class='input-lg'><br>")(scope));
+                           form.append(span);
+                           form.append(input);
+
+                       }
+
+                        elem.append(form);
+                    }
+
+                })
+    </script>
+</head>
+<body ng-controller="mainCtrl">
+<div class="well text-center " form-generate="data"></div>
+</body>
+</html>

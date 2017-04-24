@@ -1,0 +1,38 @@
+<!--###Задача 1
+Создайте пользовательскую директиву, которой можно передать массив, а результатом её работы будет сгенерированный список.-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+
+    <script>
+        angular.module("app",[])
+                .controller("mainCtrl",function($scope){
+                    $scope.items = ["Table", "Chair", "Pillow", "Picture", "Lamp"];
+                })
+                .directive("listGenerate",function(){
+                    return function(scope,elem,attr){
+                        var data=scope[attr.listGenerate];
+                        if(angular.isDefined(data)){
+                            var ul=angular.element("<ul class='list-group-item-success'>");
+                            for(var i=0;i<data.length;i++){
+                                var li=angular.element("<li>");
+                                li.text(data[i])
+                                ul.append(li);
+                            }
+                            elem.append(ul);
+                        }
+
+                    }
+
+                    })
+    </script>
+</head>
+<body ng-controller="mainCtrl">
+        <div class="well" list-generate="items"></div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!--###Задача 2 Добавьте в шаблон страницы home список со свойством name из следующего массива:
+```
+var people = [{name: 'Vasya', age: 20, email: 'vasya@mail.ru', employed: false},
+{name: 'Masha', age: 25, email: 'm@m', employed: true},
+{name: 'Petya', age: 27, email: 'petya@stuff', employed: true},
+{name: 'John', age: 36, email: 'johnDoe@mail', employed: true},
+{name: 'Jane', age: 28, email: 'janeDoe@mail', employed: false}]
+```
+Добавьте на страницу поддержку htm5Mode.-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <script src="..\..\angular_route.js"></script>
+    <style>
+
+    </style>
+    <script>
+        angular.module("app",['ngRoute'])
+
+                .config(function($routeProvider,$locationProvider){
+
+                    $routeProvider
+
+                            .when('/home', {
+                                templateUrl: 'Ignite/Angular/L16/Homework/Task/home2.html',
+                                controller:"homeCtrl"
+                            })
+                            .when('/contact', {
+                                templateUrl: 'Ignite/Angular/L16/Homework/Task/contact.html',
+
+                            })
+
+
+                    $locationProvider.html5Mode({
+                        enabled:true,
+                        requireBase:false
+                    })
+                })
+
+                .controller("homeCtrl",function($scope){
+                    $scope.people= [{name: 'Vasya', age: 20, email: 'vasya@mail.ru', employed: false},
+                        {name: 'Masha', age: 25, email: 'm@m', employed: true},
+                        {name: 'Petya', age: 27, email: 'petya@stuff', employed: true},
+                        {name: 'John', age: 36, email: 'johnDoe@mail', employed: true},
+                        {name: 'Jane', age: 28, email: 'janeDoe@mail', employed: false}]
+                })
+                .controller("mainCtrl",function($scope,$location){
+                    $scope.goHome=function(){
+                        $location.path("/home");
+                    };
+                    $scope.goContact=function(){
+                        $location.path("/contact");
+                    }
+                })
+
+
+    </script>
+</head>
+<body>
+<div class="well text-center" ng-controller="mainCtrl">
+    <ul class="nav nav-tabs">
+        <li><a ng-click="goHome()">Home</a></li>
+        <li><a ng-click="goContact()">Contact</a></li>
+    </ul>
+</div>
+<div ng-view class="text-center"></div>
+</body>
+</html>

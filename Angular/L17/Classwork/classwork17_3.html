@@ -1,0 +1,58 @@
+<!--###Задача 3
+Для формы из предыдущей задачи добавьте валидацию на AngularJS. Используйте регулярные выражения.-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+
+    <script>
+        angular.module("app",[])
+                .controller("mainCtrl",function($scope){
+                    $scope.data=[{name:"username",type:"text"},
+                        {name:"login",type:"text"},
+                        {name:"password",type:"password"},
+                        {name:"email",type:"email"}
+
+
+
+                    ]
+                    $scope.patusername=/^.{3,20}$/;
+                    $scope.patlogin=/^.{3,20}$/;
+                    $scope.patupassword=/^\w/;
+                    $scope.patemail=/^\w+@[a-zA-Z_]+?\.[a-zA-Z]+$/;
+
+
+
+
+                })
+                .directive("formGenerate",function($compile){
+                    return function(scope,elem,attr){
+                        var source=scope[attr.formGenerate];
+                        var form=angular.element($compile("<form name='myForm' class='form-group'>")(scope));
+
+                        for(var i=0;i<source.length;i++){
+                            var span=angular.element($compile("<span>"+source[i].name.slice(0,1).toUpperCase()+source[i].name.slice(1)+": </span><br>")(scope));
+                            var input=angular.element('<input name='+source[i].name+' class="input-lg" ng-pattern=pat'+source[i].name+' type="'+source[i].type+'" ng-model="'+source[i].name+'" required><br>');
+                            var p=angular.element($compile("<p ng-show=\"myForm."+source[i].name+".$invalid\ && myForm."+source[i].name+".$dirty\">Invalid field</p>")(scope));
+                            form.append(span);
+                            form.append(input);
+                            $compile(input)(scope);
+                            form.append(p);
+
+                        }
+
+                        elem.append(form);
+                    }
+
+                })
+    </script>
+</head>
+<body ng-controller="mainCtrl">
+<div class="well text-center" form-generate="data"></div>
+
+</body>
+</html>

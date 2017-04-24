@@ -1,0 +1,47 @@
+<!--
+###Задача 3
+Используйте сервис $http для получения данных из файла data.json, который находится в папке data.
+Отобразите полученные данные на странице в виде таблицы. Предусмотрите обработку ошибок в запросе (используя Promise).
+-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+    <script>
+        angular.module("app",[])
+
+                .controller("appCtrl",['$scope','$http',function(scope,$http) {
+
+                    scope.click=function(){
+                        var promise=$http.get("data/data.json")
+                        promise.then(function(response){
+                           scope.items=response.data;
+                        },function(error){
+                            alert(error.statusText +" "+error.status);
+                        })
+
+                    }
+
+                }])
+
+    </script>
+</head>
+<body>
+<div class="text-center" ng-controller="appCtrl">
+    <h2>Get data</h2>
+    <button ng-click="click()" class="btn">Click</button>
+    <table class="table">
+        <tr ng-repeat="item in items">
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+
+        </tr>
+    </table>
+</div>
+</body>
+</html>

@@ -16,40 +16,129 @@
     <script>
         angular.module("app",[])
 
-                .controller("appCtrl",['$scope','counterLogger',function(scope,counterLogger) {
+                .controller("appCtrl",['$scope','mathService',function(scope,mathService) {
 
-                    scope.click=function(){
-                        counterLogger();
+                    scope.plus=function(){
+                        scope.output=mathService.plus(+scope.input1,+scope.input2);
+                    };
+                    scope.minus=function(){
+                        scope.output=mathService.minus(+scope.input1,+scope.input2);
+                    };
+                    scope.mult=function(){
+                        scope.output=mathService.multiply(+scope.input1,+scope.input2);
+                    };
+                    scope.divide=function(){
+                        scope.output=mathService.divide(+scope.input1,+scope.input2);
                     }
                 }])
-                .provider("counterLogger",function(){
-                    var limit = null;
+                .controller("appCtrl2",['$scope','mathFactory',function(scope,mathFactory){
+
+                    scope.plus=function(){
+                        scope.output=mathFactory().plus(+scope.input1,+scope.input2);
+                    };
+                    scope.minus=function(){
+                        scope.output=mathFactory().minus(+scope.input1,+scope.input2);
+                    };
+                    scope.mult=function(){
+                        scope.output=mathFactory().multiply(+scope.input1,+scope.input2);
+                    };
+                    scope.divide=function(){
+                        scope.output=mathFactory().divide(+scope.input1,+scope.input2);
+                    }
+                }])
+                .controller("appCtrl3",['$scope','mathProvider',function(scope,mathProvider){
+
+                    scope.plus=function(){
+                        scope.output=mathProvider.plus(+scope.input1,+scope.input2);
+                    };
+                    scope.minus=function(){
+                        scope.output=mathProvider.minus(+scope.input1,+scope.input2);
+                    };
+                    scope.mult=function(){
+                        scope.output=mathProvider.multiply(+scope.input1,+scope.input2);
+                    };
+                    scope.divide=function(){
+                        scope.output=mathProvider.divide(+scope.input1,+scope.input2);
+                    }
+                }])
+
+
+                .service("mathService",function(){
                     return {
-
-                        setCounterLimit:function(setting,value){
-                            if(setting==true)
-                                limit=value;
+                        plus:function(a,b){
+                            return a+b;
                         },
+                        minus:function(a,b){
+                            return a-b;
+                        },
+                        multiply:function(a,b){
+                            return a*b;
+                        },
+                        divide:function(a,b){
+                            return a/b;
+                        }
 
-                        $get: function () {
-                            var counter = 1;
-                            return function(){
-                                if(limit && counter < limit || limit == null)
-                                    console.log("Click: " + counter++);
 
+                    }
+                })
+                .factory("mathFactory",function(){
+                    return function(){
+                       return{
+                           plus:function(a,b){return a+b;},
+                        minus:function(a,b){return a-b;},
+                        multiply:function(a,b){return a*b;},
+                        divide:function(a,b){return a/b;}
+                    }
+
+                    }
+        })
+
+                .provider("mathProvider",function(){
+                    return {
+                        $get:function(){
+                            return{
+                                plus:function(a,b){return a+b;},
+                                minus:function(a,b){return a-b;},
+                                multiply:function(a,b){return a*b;},
+                                divide:function(a,b){return a/b;}
                             }
                         }
                     }
                 })
-                .config(function(counterLoggerProvider){
-                    counterLoggerProvider.setCounterLimit(true,10);
-                })
+
+
     </script>
 </head>
 <body>
 <div class="text-center" ng-controller="appCtrl">
-    <h2>Click me</h2>
-    <button ng-click="click()" class="btn">Click</button>
+    <h1>Способ 1(использование service)</h1>
+    <input class="input-lg" placeholder="Поле для ввода 1" ng-model="input1">
+    <button class="btn" ng-click="plus()">+</button>
+    <button class="btn" ng-click="minus()">-</button>
+    <button class="btn" ng-click="divide()">/</button>
+    <button class="btn" ng-click="mult()" >*</button>
+    <input class="input-lg" placeholder="Поле для ввода 2" ng-model="input2">
+    <h2>={{output}}</h2>
+</div>
+<div class="text-center" ng-controller="appCtrl2">
+    <h1>Способ 2(использование factory)</h1>
+    <input class="input-lg" placeholder="Поле для ввода 1" ng-model="input1">
+    <button class="btn" ng-click="plus()">+</button>
+    <button class="btn" ng-click="minus()">-</button>
+    <button class="btn" ng-click="divide()">/</button>
+    <button class="btn" ng-click="mult()" >*</button>
+    <input class="input-lg" placeholder="Поле для ввода 2" ng-model="input2">
+    <h2>={{output}}</h2>
+</div>
+<div class="text-center" ng-controller="appCtrl3">
+    <h1>Способ 3(использование provider)</h1>
+    <input class="input-lg" placeholder="Поле для ввода 1" ng-model="input1">
+    <button class="btn" ng-click="plus()">+</button>
+    <button class="btn" ng-click="minus()">-</button>
+    <button class="btn" ng-click="divide()">/</button>
+    <button class="btn" ng-click="mult()" >*</button>
+    <input class="input-lg" placeholder="Поле для ввода 2" ng-model="input2">
+    <h2>={{output}}</h2>
 </div>
 </body>
 </html>

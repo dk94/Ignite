@@ -1,0 +1,45 @@
+<!--###Задача 3
+Создайте директиву dialogBox, которая будет выводить на экран в диалоговом окне содержимое элемента,
+к которому привязана директива.-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <link href="../../bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-theme.css" rel="stylesheet" />
+    <script src="..\..\angular.js"></script>
+
+    <script>
+        angular.module("app",[])
+                .controller("mainCtrl",function($scope){
+
+                })
+
+                .directive("dialogBox",function(){
+                    return {
+                        restrict:"A",
+                        link: function (scope, elem, attrs) {
+                                var div=elem.find("div");
+                            alert(div.text());
+                            div.text("");
+
+                        },
+                        transclude:true,
+                        template:"<div ng-transclude></div>"
+
+                    }
+                })
+
+
+
+    </script>
+</head>
+<body ng-controller="mainCtrl">
+<div class="text-center">
+
+    <div dialog-box>f</div>
+    <div dialog-box>122</div>
+    <div dialog-box>34522</div>
+</div>
+</body>
+</html>
