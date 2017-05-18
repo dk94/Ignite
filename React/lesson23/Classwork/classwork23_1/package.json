@@ -1,0 +1,14 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "main": "app\\src\\main.js",
+  "scripts": {
+    "start": "webpack --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "webpack": "^2.5.1"
+  }
+}

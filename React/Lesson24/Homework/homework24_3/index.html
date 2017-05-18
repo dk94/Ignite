@@ -1,0 +1,71 @@
+<!--### Задача 3
+Модицифицируйте код предыдущей задачи. Реализуйте следующее:
+* При клике по каждому элементу списка происходит перенаправление на страницу “/tableView/:id” или “/listView/:id”,
+в зависимости от текущего пути приложения, где id – соответствующее свойтво id элемента списка или таблицы, по которому
+кликнул пользователь
+* На странице, на которую будет происходить перенаправление, должна отображаться инфомация об элементе массива users,
+id которого был передан в поисковой строке. Реализуйте передачу этой информации через query параметры.  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>React App Setup</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<style>
+
+    div{
+        width:80%;
+        margin:0 auto;
+
+        min-height:200px;
+    }
+
+
+    .transition-group {
+        position: relative;
+        flex-grow: 1;
+    }
+
+    .transition-group > * {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .page-enter {
+        opacity: 0;
+        transform: translateY(-10rem);
+        transition: all 2s ease-out;
+        transition-delay: 2s;
+    }
+
+    .page-enter.page-enter-active {
+        opacity: 1;
+        transform: none;
+    }
+
+    .page-leave {
+        opacity: 1;
+        transition: all 2s linear;
+    }
+
+    .page-leave.page-leave-active {
+        opacity: 0;
+    }
+
+</style>
+</head>
+
+<body>
+<div id="root">
+
+</div>
+<script src="build/bundle.js"></script>
+</body>
+</html>
