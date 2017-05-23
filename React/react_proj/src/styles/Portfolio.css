@@ -1,0 +1,37 @@
+.portfolioCol{
+    border:1px solid gray;
+
+    padding:10px 0;
+    font-size:0.6em;
+}
+.portfolioColActive{
+
+    border-top:3px solid #18cfab;
+    color:#18cfab;
+
+
+}
+.tabsPf{
+    margin:40px 0;
+    cursor:default;
+}
+
+
+.visibleBlock{ position:absolute;
+      width:100%;height:100%;
+
+      background-color:rgba(10,163,181,0.5);
+      top:0;left:0;
+      text-align: center;
+  }
+.nonVisibleBlock{ width:0;height:0;visibility: hidden;
+}
+
+ #portfolio span{
+    position:relative;
+    top:50%;
+    font-weight: 900;
+    opacity:1;
+    color: white;
+     cursor:default;
+}

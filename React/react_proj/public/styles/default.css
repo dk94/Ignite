@@ -1,0 +1,79 @@
+.sprite {
+    background-image: url('../../public/img/spritesheet.png');
+    margin:0 auto;
+    background-repeat: no-repeat;
+    display: block;
+}
+.sprite2 {
+    background-image: url('../../public/img/spritesheet2.png');
+    background-repeat: no-repeat;
+    display: block;
+    margin:0 auto;
+}
+
+.sprite-aboutIcon {
+    width: 23px;
+    height: 23px;
+    background-position: -5px -5px;
+}
+
+.sprite-arrowTop {
+    width: 44px;
+    height: 44px;
+    background-position: -38px -5px;
+}
+
+.sprite-statistic_img1 {
+    width: 109px;
+    height: 109px;
+    background-position: -92px -5px;
+}
+
+.sprite-statistic_img2 {
+    width: 109px;
+    height: 109px;
+    background-position: -5px -124px;
+}
+
+.sprite-statistic_img3 {
+    width: 109px;
+    height: 109px;
+    background-position: -124px -124px;
+}
+
+.sprite-statistic_img4 {
+    width: 109px;
+    height: 109px;
+    background-position: -211px -5px;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    body { font-size: 1em; }
+    h1{font-size: 1.2em;}   .slider_content{top:5%;} #slider .btn{padding:3px; font-size:x-small}
+    h4{font-size: 1em;}
+
+    #footer{font-size:small;}
+   /* h2{font-size: 2em;}
+
+    span{font-size: 1em;}
+    #mainImage span{font-size: 0.5em;}
+    #mainImage button{padding:0;}
+    #mainImage .outerBlock{left:25%;top:25%;}
+    header .mainMenu a{
+        padding: 5px!important;
+    }
+    header .mainMenu a:focus{border:none!important;}*/
+
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .slider_content{top:10%;}
+    header .mainMenu a{
+        padding: 10px!important;
+    }
+    header .mainMenu a:focus{border:none!important;}
+    header .mainMenu a:hover{border:none!important;}
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+
+}

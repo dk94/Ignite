@@ -1,0 +1,15 @@
+.serviceCol{
+    border:1px solid gray;
+    background-color: #f8fcfe;
+    padding:20px 0;
+    font-size:0.9em;
+    text-decoration: none!important;
+    color: black!important;
+}
+.serviceColActive {
+
+    background-color: #18cfab;
+    color: white!important;
+    text-decoration: none!important;
+
+}

@@ -1,0 +1,85 @@
+.slider_content{
+    position: absolute;top:35%;
+}
+.advClsOdd{
+
+    background-color: #1B2933;
+    color: #17CFAB;
+    border-top: 5px solid;
+    padding: 40px 0;
+
+}
+.advClsEven{
+
+    background-color: #17CFAB;
+    border-top: 5px solid;
+    padding: 40px 0;
+}
+
+#slider{padding:0!important;}
+
+
+#slider .btn{
+    background-color: transparent;
+}
+#slider .btn:hover{
+    background-color: #17CFAB;
+    color: white;
+}
+
+#slider .butt{
+    background-color: #00CBF5;
+    color: #FFF;
+    display: inline-block;
+    margin: 10px 5px 0 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    border-top: 2px solid white;
+}
+
+#slogan{
+    color:white; font-weight: bold;
+}
+#slider h4{color:white}
+#slider span{color:#17CFAB;}
+
+
+
+.sprite-adv1 {
+    width: 51px;
+    height: 85px;
+    background-position: -5px -5px;
+}
+
+.sprite-adv3 {
+    width: 53px;
+    height: 85px;
+    background-position: -66px -5px;
+}
+
+.sprite-adv4 {
+    width: 111px;
+    height: 85px;
+    background-position: -129px -5px;
+}
+
+.sprite-adv_2 {
+    width: 105px;
+    height: 85px;
+    background-position: -5px -100px;
+}
+
+.sprite-l_arr-fw {
+    width: 10px;
+    height: 18px;
+    cursor:pointer;
+    background-position: -250px -5px;
+}
+
+.sprite-r_arr-fw {
+    width: 10px;
+    cursor:pointer;
+    height: 18px;
+    background-position: -270px -5px;
+}
+

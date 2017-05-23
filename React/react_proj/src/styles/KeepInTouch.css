@@ -1,0 +1,12 @@
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}
+.valid{
+    color: white;
+}
+.error {
+    color: red;
+    font-weight: bold;
+}

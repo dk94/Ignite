@@ -1,0 +1,36 @@
+.personTeam{
+    background-color:#2e4a5b;
+}
+.nameBlockTeam{
+    position:absolute;
+    color:white;
+    bottom:0;
+    background-color:#2e4a5b;
+    width:100%;
+    text-align: center;
+
+}
+
+.socialTeam{
+    float:left;
+    width:25%;
+    background-color:#2e4a5b;
+    color:white;
+    padding:10px 0;
+    border-top:1px solid white;
+    border-right:1px solid white;
+}
+
+.facebookItem:hover{
+    background-color:#36609e;
+}
+.vimeoItem:hover{
+    background-color:#ee558e;
+}
+.twiterItem:hover{
+    background-color:#2ca9e1;
+}
+.skypeItem:hover{
+    background-color:#00aff0;
+}
+

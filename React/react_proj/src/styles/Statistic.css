@@ -1,0 +1,12 @@
+.statClsOdd{
+    background-color: #1B2933;
+    color: #17CFAB;
+    border-top: 5px solid;
+    padding: 40px 0;
+}
+.statClsEven{
+
+    background-color: #17CFAB;
+    border-top: 5px solid;
+    padding: 40px 0;
+}

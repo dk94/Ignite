@@ -1,0 +1,362 @@
+header{min-height:70px; }
+header .mainMenu a{
+    font-size:0.75em;
+    padding-bottom:20px;
+    padding-top:20px;
+    color:white!important;
+    cursor: pointer;
+}
+
+
+header .mainMenu a:focus{  border-bottom:2px solid #00e1ff!important;
+    color: #00e1ff!important }
+header .mainMenu a:hover{
+    border-bottom:2px solid #00e1ff!important;
+    color: #00e1ff!important
+
+}
+header>nav{background-color:#44433e;}
+header .mainMenu{
+    margin-right:20%;
+
+}
+header .logo{
+    margin-left:20%;
+}
+
+.slider_content{
+    position: absolute;top:35%;
+}
+.advClsOdd{
+
+    background-color: #1B2933;
+    color: #17CFAB;
+    border-top: 5px solid;
+    padding: 40px 0;
+
+}
+.advClsEven{
+
+    background-color: #17CFAB;
+    border-top: 5px solid;
+    padding: 40px 0;
+}
+
+#slider{padding:0!important;}
+
+
+#slider .btn{
+    background-color: transparent;
+}
+#slider .btn:hover{
+    background-color: #17CFAB;
+    color: white;
+}
+
+#slider .butt{
+    background-color: #00CBF5;
+    color: #FFF;
+    display: inline-block;
+    margin: 10px 5px 0 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    border-top: 2px solid white;
+}
+
+#slogan{
+    color:white; font-weight: bold;
+}
+#slider h4{color:white}
+#slider span{color:#17CFAB;}
+
+
+
+.sprite-adv1 {
+    width: 51px;
+    height: 85px;
+    background-position: -5px -5px;
+}
+
+.sprite-adv3 {
+    width: 53px;
+    height: 85px;
+    background-position: -66px -5px;
+}
+
+.sprite-adv4 {
+    width: 111px;
+    height: 85px;
+    background-position: -129px -5px;
+}
+
+.sprite-adv_2 {
+    width: 105px;
+    height: 85px;
+    background-position: -5px -100px;
+}
+
+.sprite-l_arr-fw {
+    width: 10px;
+    height: 18px;
+    cursor:pointer;
+    background-position: -250px -5px;
+}
+
+.sprite-r_arr-fw {
+    width: 10px;
+    cursor:pointer;
+    height: 18px;
+    background-position: -270px -5px;
+}
+
+#feedback{
+    background-color: #f8fcfe;
+}
+.commentFieldFeed{
+    background-color: white;
+    min-height: 600px;
+    border:2px solid #d6e3e3;
+    padding:20px
+}
+.msgContFeed{
+    border:1px solid #dedede;
+    border-radius:5%;
+    margin-bottom: 20px;
+}
+.TitleMsgFeed{
+    background-color: #f7f7f7;
+    padding:10px;
+}
+.MsgFeed{
+
+    min-height: 40px;
+    font-size: x-small;
+
+}
+.AddMsgTitle{
+    padding:20px;
+
+
+}
+.AddMsgText{
+    padding-left:20px;
+
+}
+
+.btn{
+    background-color: #17CFAB;
+    color:white;
+    padding:10px;
+    font-size: small;
+
+}
+
+
+
+.leaveMsgFeed{
+    margin-top:70px;
+}
+
+
+#footer{
+    background-color: #1B2933;
+    color:gray;
+}
+#footer span{
+
+    color: #17CFAB;
+
+}#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}
+.valid{
+    color: white;
+}
+.error {
+    color: red;
+    font-weight: bold;
+}.statClsOdd{
+    background-color: #1B2933;
+    color: #17CFAB;
+    border-top: 5px solid;
+    padding: 40px 0;
+}
+.statClsEven{
+
+    background-color: #17CFAB;
+    border-top: 5px solid;
+    padding: 40px 0;
+}
+.personTeam{
+    background-color:#2e4a5b;
+}
+.nameBlockTeam{
+    position:absolute;
+    color:white;
+    bottom:0;
+    background-color:#2e4a5b;
+    width:100%;
+    text-align: center;
+
+}
+
+.socialTeam{
+    float:left;
+    width:25%;
+    background-color:#2e4a5b;
+    color:white;
+    padding:10px 0;
+    border-top:1px solid white;
+    border-right:1px solid white;
+}
+
+.facebookItem:hover{
+    background-color:#36609e;
+}
+.vimeoItem:hover{
+    background-color:#ee558e;
+}
+.twiterItem:hover{
+    background-color:#2ca9e1;
+}
+.skypeItem:hover{
+    background-color:#00aff0;
+}
+
+.portfolioCol{
+    border:1px solid gray;
+
+    padding:10px 0;
+    font-size:0.6em;
+}
+.portfolioColActive{
+
+    border-top:3px solid #18cfab;
+    color:#18cfab;
+
+
+}
+.tabsPf{
+    margin:40px 0;
+    cursor:default;
+}
+
+
+.visibleBlock{ position:absolute;
+      width:100%;height:100%;
+
+      background-color:rgba(10,163,181,0.5);
+      top:0;left:0;
+      text-align: center;
+  }
+.nonVisibleBlock{ width:0;height:0;visibility: hidden;
+}
+
+ #portfolio span{
+    position:relative;
+    top:50%;
+    font-weight: 900;
+    opacity:1;
+    color: white;
+     cursor:default;
+}.serviceCol{
+    border:1px solid gray;
+    background-color: #f8fcfe;
+    padding:20px 0;
+    font-size:0.9em;
+    text-decoration: none!important;
+    color: black!important;
+}
+.serviceColActive {
+
+    background-color: #18cfab;
+    color: white!important;
+    text-decoration: none!important;
+
+}
+.newsItem{
+    background-color:#f8fcff;
+}
+.nameBlockTeam{
+    position:absolute;
+    bottom:0;
+    color:black;
+    background-color:#f8fcff;
+    width:100%;
+    text-align: center;
+    padding:10px;
+
+}
+.dateBlockTeam{
+    position:absolute;
+    top:0;
+    right: 0;
+    background-color:#203d38;
+    width:20%;
+    color:white;
+    text-align: center;
+    padding:5px;
+
+}
+
+.newsRow{
+    margin-top:50px;
+}
+.newsCol{
+    margin-bottom:30px;
+}#aboutCompany{
+    background-color: #1B2933;
+}
+section{padding-top:30px;padding-bottom: 30px;}
+body{overflow-x:hidden}
+
+.menuAbout{color:white; font-size:x-small; margin-top:60px;}
+.menuAboutAct{color:#17CFAB; border-top:1px solid #17CFAB}
+
+.history{
+    color:white;
+    margin-top: 30px;
+}
+.historyImg{
+    margin-left: 3%;
+    margin-top: 15px;
+    color:white;
+    font-size:small;
+}
+
+
+
+.ourBiography{
+    color:white;
+    margin-top: 30px;
+    font-size:small;
+}
+
+.skills-diagram {
+    display: inline-block;
+    background-color: #2d6ca2;
+    height: 100%;
+    overflow: hidden;
+    white-space:nowrap;
+    line-height: 50px;
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition:all 3s;
+}
+.skills-diagram-container {
+    margin: 10px 0;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 50px;
+    /*width: 100%;*/
+    text-align: left;
+}
+.about-content {
+    margin: 50px 0;
+    color: #bebebe;
+}

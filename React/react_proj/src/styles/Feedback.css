@@ -1,0 +1,58 @@
+#feedback{
+    background-color: #f8fcfe;
+}
+.commentFieldFeed{
+    background-color: white;
+    min-height: 600px;
+    border:2px solid #d6e3e3;
+    padding:20px
+}
+.msgContFeed{
+    border:1px solid #dedede;
+    border-radius:5%;
+    margin-bottom: 20px;
+}
+.TitleMsgFeed{
+    background-color: #f7f7f7;
+    padding:10px;
+}
+.MsgFeed{
+
+    min-height: 40px;
+    font-size: x-small;
+
+}
+.AddMsgTitle{
+    padding:20px;
+
+
+}
+.AddMsgText{
+    padding-left:20px;
+
+}
+
+.btn{
+    background-color: #17CFAB;
+    color:white;
+    padding:10px;
+    font-size: small;
+
+}
+
+
+
+.leaveMsgFeed{
+    margin-top:70px;
+}
+
+
+#footer{
+    background-color: #1B2933;
+    color:gray;
+}
+#footer span{
+
+    color: #17CFAB;
+
+}

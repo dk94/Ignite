@@ -1,0 +1,31 @@
+.newsItem{
+    background-color:#f8fcff;
+}
+.nameBlockTeam{
+    position:absolute;
+    bottom:0;
+    color:black;
+    background-color:#f8fcff;
+    width:100%;
+    text-align: center;
+    padding:10px;
+
+}
+.dateBlockTeam{
+    position:absolute;
+    top:0;
+    right: 0;
+    background-color:#203d38;
+    width:20%;
+    color:white;
+    text-align: center;
+    padding:5px;
+
+}
+
+.newsRow{
+    margin-top:50px;
+}
+.newsCol{
+    margin-bottom:30px;
+}
