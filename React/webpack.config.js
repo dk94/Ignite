@@ -43,6 +43,7 @@ module.exports = {
         "./lesson26/Classwork/classwork26_3/build/bundle": "./lesson26/Classwork/classwork26_3/src/main.jsx",
         "./Lesson26/Homework/homework26_1/build/bundle": "./Lesson26/Homework/homework26_1/src/main.jsx",
         "./Lesson26/Homework/homework26_2/build/bundle": "./Lesson26/Homework/homework26_2/src/main.jsx",
+        "./Lesson26/Homework/homework26_3/build/bundle": "./Lesson26/Homework/homework26_3/src/main.jsx",
 
     } ,
 
