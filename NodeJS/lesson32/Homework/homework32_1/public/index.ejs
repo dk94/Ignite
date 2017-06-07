@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</head>
+<style>
+    table th{
+        text-align:center;
+    }
+
+</style>
+<body>
+<div class="text-center" style="margin:0 auto; width:75%">
+<h1>Table</h1>
+<%- data %>
+    <a href="/addItem" class="btn btn-primary">Add</a>
+    <div style="margin-top:30px; border:1px solid black">
+        <h2>Write ID to edit/delete</h2>
+        <input id="id" style="width:30%; margin:0 auto;" type="text" placeholder="id" class="form-control">
+        <button id="edit" class="btn btn-primary">Edit Item</button>
+        <button id="delete" class="btn btn-primary">Delete Item</button>
+    </div>
+</div>
+
+
+<script>
+
+        function makeRequest(path,id){
+            var xhr=new XMLHttpRequest();
+
+            xhr.open('GET',path+'/'+id)
+            xhr.onload=function(){
+                    if(this.responseText=='error')
+                        alert('No such Item');
+                    else if(this.responseText=='success')
+                        alert('Done');
+                    else
+                        location=this.responseText;
+
+            }
+            xhr.send();
+        }
+
+
+        document.getElementById("edit").addEventListener('click',function () {
+            var id=document.getElementById('id').value;
+            console.log(id);
+            if(id)
+            makeRequest('/edit',id);
+        })
+        document.getElementById("delete").addEventListener('click',function () {
+            var id=document.getElementById('id').value;
+            if(id)
+                makeRequest('/delete',id);
+        })
+
+</script>
+</body>
+</html>

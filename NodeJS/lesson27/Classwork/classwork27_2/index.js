@@ -1,5 +1,7 @@
 /**
- * Created by Dima on 26.05.2017.
+ ###Задача 2
+ Напишите код, который загрузит встроеннный модуль NodeJS events.
+
  */
 const EventEmitter = require('events');
 class MyEmitter extends EventEmitter {}

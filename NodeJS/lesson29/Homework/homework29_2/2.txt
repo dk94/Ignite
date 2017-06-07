@@ -1,0 +1,10 @@
+host: localhost:8080 
+connection: keep-alive 
+pragma: no-cache 
+cache-control: no-cache 
+user-agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.81 Safari/537.36 OPR/45.0.2552.812 
+accept: image/webp,image/*,*/*;q=0.8 
+referer: http://localhost:8080/ 
+accept-encoding: gzip, deflate, sdch, br 
+accept-language: ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4 
+

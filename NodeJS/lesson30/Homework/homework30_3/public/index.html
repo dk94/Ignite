@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #output{
+        width:50%;
+        margin:0 auto;
+        text-align: center;
+    }
+</style>
+<body>
+
+<script>
+    window.onload=function () {
+        var users = [
+            { name: 'Jane', age: 23 }, { name: 'John', age: 30 }, { name: 'Vasya', age: 25 },
+            { name: 'Yvonne', age: 34 }, { name: 'Will', age: 18 }, {name: 'Jack', age: 26}
+        ]
+
+        function getQuery(id) {
+            var xhr=new XMLHttpRequest();
+
+            xhr.open('GET','/users/'+id);
+
+            xhr.onload=function () {
+                document.getElementById('output').innerHTML=this.responseText;
+            }
+
+            xhr.send();
+        }
+
+        var ul=document.createElement('ul');
+        for (var i=0;i<users.length;i++){
+
+            var li=document.createElement('li');
+
+            li.innerHTML=users[i].name;
+
+            li.dataset.id=i;
+
+            li.addEventListener('click',function (e) {
+                getQuery(e.target.dataset.id);
+            })
+
+            ul.appendChild(li);
+        }
+
+        document.getElementById('output').appendChild(ul);
+    }
+</script>
+<div id="output">
+
+</div>
+</body>
+</html>

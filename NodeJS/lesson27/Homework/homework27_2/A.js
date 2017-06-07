@@ -26,7 +26,9 @@ function Counter(count) {
 
 }
 
-exports=a;
+module.exports = function (count) {
+    return new Counter(count);
+};
 
 
 

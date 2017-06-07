@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div class="text-center" style="width:50%; margin:0 auto">
+   <h1>Write your data</h1>
+       <h2>Name</h2>
+       <input id="name" class="form-control">
+       <h2>Info</h2>
+       <input id="info" class="form-control">
+       <button id="send" class="btn btn-primary">Send</button>
+   </div>
+
+
+    <script>
+
+
+            function makeRequest(data) {
+                var xhr=new XMLHttpRequest();
+                xhr.open('POST','/addItem' );
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.onload=function () {
+                    window.location=this.responseText;
+                }
+                xhr.send(data);
+            }
+
+
+
+            document.getElementById('send').addEventListener('click',function () {
+                var name=document.getElementById('name').value;
+                var info=document.getElementById('info').value;
+                var data={}
+                if(name||info){
+                    data.name=name;
+                    data.info=info;
+                }
+
+                data=JSON.stringify(data);
+                console.log(data);
+                makeRequest(data);
+            })
+
+
+    </script>
+
+</body>
+</html>

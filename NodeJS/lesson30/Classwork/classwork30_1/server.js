@@ -1,6 +1,7 @@
 /**
- * Created by Dima on 26.05.2017.
- */
+/*###Задача 1
+Создайте HTTP сервер с помощью Express,
+    который в ответ на любой запрос возвращает html страницу с заголовком "Hello from Express"(в теге h1).*/
 var express = require('express');
 var app = express();
 

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="text-center" style="margin:0 auto; width:75%">
+    <h1>Reg form</h1>
+
+    <div style="margin-top:30px; border:1px solid black">
+        <h2>Please fill fields</h2>
+        <form id="form">
+        <input id="name" style="width:30%; margin:0 auto;" type="text" placeholder="username" class="form-control" required>
+        <input id="pass" style="width:30%; margin:0 auto;" type="password" placeholder="pass" class="form-control" required>
+        <input type="submit" id="signUp" placeholder="SignUp" class="btn btn-primary"></input>
+        </form>
+        <h5>Already have an account? Please<a href="/logIn"> log in</a></h5>
+    </div>
+</div>
+
+<script>
+
+  document.getElementById('signUp').value='signUp'
+  document.getElementById('form').addEventListener('submit',function (e) {
+      e.preventDefault();
+      var username=document.getElementById('name').value;
+      var pass=document.getElementById('pass').value;
+
+      var data=JSON.stringify({username:username,password:pass})
+      makeRequest(data)
+      function makeRequest(data){
+          var xhr=new XMLHttpRequest();
+          xhr.open('POST','/signUp');
+          xhr.setRequestHeader('Content-Type', 'application/json');
+          xhr.onload=function(){
+              alert(this.responseText);
+          }
+
+          xhr.send(data);
+      }
+  })
+
+</script>
+</body>
+</html>

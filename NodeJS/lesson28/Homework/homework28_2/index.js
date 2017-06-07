@@ -1,4 +1,8 @@
-
+/*
+ ###Задача 2
+ Рядом с файлом с задачами в папке Homework находится файл test.txt.
+ Напишите код, который выведет в консоль с 10 по 15 байт этого файла.
+* */
 var fs = require('fs');
 fs.open('lesson28/Homework/homework28_2/test.txt', 'r', function (err, fd) {
     console.log('opening file!');
