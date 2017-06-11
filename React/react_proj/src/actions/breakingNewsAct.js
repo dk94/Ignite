@@ -12,7 +12,7 @@ export function initBN() {
 
 
         $.ajax({
-            url: "../src/data.json",
+            url: "data.json",
         })
             .done(function( data ) {
 

@@ -12,7 +12,8 @@ header .mainMenu a:focus{  border-bottom:2px solid #00e1ff!important;
     color: #00e1ff!important }
 header .mainMenu a:hover{
     border-bottom:2px solid #00e1ff!important;
-    color: #00e1ff!important
+    color: #00e1ff!important;
+    padding-bottom:18px;
 
 }
 header>nav{background-color:#44433e;}

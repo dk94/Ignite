@@ -36,7 +36,7 @@ class CommentField extends React.Component{
                     <div className="row justify-content-center">
                     {this.props.data.map((item,index)=>{
                         return(
-                            <Comment index={index} close={this.props.close} title={item.title} msg={item.msg}/>
+                            <Comment key={index} index={index} close={this.props.close} title={item.title} msg={item.msg}/>
                         )
                     })}
 
@@ -89,10 +89,15 @@ const LeaveMsg=({addMsg})=>(
         </div>
         <div className="col-lg-8">
             <div style={{float:"left",width:"50%"}}>
-                <textarea id="msgFeedback" rows="3" className="form-control AddMsgText" placeholder="Title"/>
+                <textarea id="msgFeedback" rows="3" className="form-control AddMsgText" placeholder="Message"/>
             </div>
             <div style={{float:"right",paddingTop:"30px", fontWeight:"bold",color:"white"}}>
-               <button onClick={()=>{addMsg(document.querySelector('#titleFeedback').value,document.querySelector('#msgFeedback').value)}} className="btn">+ Add Comment</button>
+               <button onClick={()=>
+               {if(!document.querySelector('#titleFeedback')||!document.querySelector('#msgFeedback').value){
+                   alert("Bad Data");}
+                   else
+                   addMsg(document.querySelector('#titleFeedback').value,document.querySelector('#msgFeedback').value)}
+               } className="btn">+ Add Comment</button>
             </div>
 
         </div>

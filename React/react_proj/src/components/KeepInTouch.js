@@ -59,7 +59,12 @@ var MyForm = React.createClass({
                             <textarea rows="4" onInput={this.messageChange} className="form-control" placeholder="Message"/>
                             <p className={this.state.message_cls}>Minimal length of message 20 symbols!</p>
 
-                            <button className="btn butt" id='submitt'>SEND REQUEST</button>
+                            <button className="btn butt" onClick={(e)=>{e.preventDefault();
+                            if(this.state.name_cls==
+                            'valid'&&this.state.email_cls=='valid'&&this.state.message_cls=='valid')
+                                alert("Sent")
+                            else
+                            alert("Error")}} id='submitt'>SEND REQUEST</button>
 
                         </div>
                     </form>

@@ -15,13 +15,13 @@ export const previousSlide= (id) => {
     }
 }
 export const autoSwitch = () => {
-    console.log('switch');
+    console.log('switch autoswitch');
     return {
         type: 'AUTO_SWITCH'
     }
 }
 export const setFlag = () => {
-    console.log('switch');
+    console.log('switch setflag');
     return {
         type: 'SET_FLAG'
     }

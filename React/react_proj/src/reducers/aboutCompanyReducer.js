@@ -8,8 +8,8 @@ const aboutMenuReducer=(state={
 
             return{
                 buttonsN: state.buttonsN,
-                id:action.id
-
+                id:action.id,
+                skillsShow: true
 
             }
 

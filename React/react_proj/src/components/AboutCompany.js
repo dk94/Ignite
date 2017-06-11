@@ -145,6 +145,7 @@ class SkillsBlock extends React.Component {
     }
 
     render() {
+        console.log(this.props.skillsShow);
 
         let items = data.map((item, index) => {
             return (

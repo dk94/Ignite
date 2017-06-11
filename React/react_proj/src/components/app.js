@@ -12,6 +12,7 @@ import BreakingNewsCont from '../containers/BreakingNewsContainer.js';
 import ServicesCont from '../containers/ServicesCont.jsx';
 import WebDesign from './servicesView/WebDesign.js'
 import AboutCompanyCont from '../containers/AboutCompanyCont.jsx';
+import NewsView from '../containers/NewsView';
 import Footer from './Footer.js'
 
 
@@ -28,6 +29,23 @@ class App extends React.Component {
         return (
             <div className="container-fluid" style={{padding:"0"}}>
                 <NavbarCont/>
+                {this.props.children}
+                <Footer/>
+
+
+
+            </div>
+        )
+
+    }
+}
+class Home extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div>
                 <SliderCont/>
 
                 {this.props.children}
@@ -38,20 +56,17 @@ class App extends React.Component {
                 <BreakingNewsCont/>
                 <FeedbackCont/>
                 <KeepInTouch/>
-                <Footer/>
-
-
-
             </div>
         )
-
     }
 }
 
 
+
 const AppR=()=>(
     <Router history={hashHistory}>
-        <Route path="/" component={App}>
+        <Route component={App}>
+            <Route path="/" component={Home} >
             <IndexRoute components={ServicesCont}/>
             <Route path="services" component={ServicesCont}>
                 <IndexRoute component={WebDesign} text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac diam feugiat, blandit nisl sit amet, fringilla enim. Integer consectetur ligula in sagittis accumsan. In ullamcorper volutpat maximus. Praesent facilisis tortor eu sapien sagittis eleifend. Curabitur vulputate, lorem in fringilla porta, odio odio posuere velit, condimentum consequat ligula sapien ut ex. Maecenas commodo ex sed odio ultrices porta" url="img/pf_img1.png" />
@@ -62,7 +77,8 @@ const AppR=()=>(
                 <Route path="market" text="ipsum  sit amet, consectetur adipiscing elit. Nam ac diam feugiat, blandit nisl sit amet, fringilla enim. Integer consectetur ligula in sagittis accumsan. In ullamcorper volutpat maximus. Praesent facilisis tortor eu sapien sagittis eleifend. Curabitur vulputate, lorem in fringilla porta, odio odio posuere velit, condimentum consequat ligula sapien ut ex. Maecenas commodo ex sed odio ultrices porta" url="img/pf_img6.png" component={WebDesign} />
                 <Route path="seo" text=" dolor Lorem ipsum  sit amet, consectetur adipiscing elit. Nam ac diam feugiat, blandit nisl sit amet, fringilla enim. Integer consectetur ligula in sagittis accumsan. In ullamcorper volutpat maximus. Praesent facilisis tortor eu sapien sagittis eleifend. Curabitur vulputate, lorem in fringilla porta, odio odio posuere velit, condimentum consequat ligula sapien ut ex. Maecenas commodo ex sed odio ultrices porta" url="img/pf_img7.png" component={WebDesign} />
             </Route>
-
+            </Route>
+            <Route path="/:id"  component={NewsView} />
         </Route>
     </Router>
 )

@@ -40,7 +40,7 @@ class NewsBlock extends React.Component{
         return(
             <div className="row justify-content-center newsRow" >
                 {this.props.data.map((item,index)=>{
-                    return(<NewsItem  title="Title" url="img/newsItem.png" dateD={new Date(item.date).getDate()} dateM={this.getTextMont(item.date)}/>)
+                    return(<NewsItem key={index} id={index}  title="Title" url="img/newsItem.png" dateD={new Date(item.date).getDate()} dateM={this.getTextMont(item.date)}/>)
                 })}
                 <button onClick={()=>{this.props.loadMore()}} className="btn">+ LOAD MORE</button>
             </div>
@@ -49,8 +49,8 @@ class NewsBlock extends React.Component{
 
 }
 
-const NewsItem=({title,url,dateD,dateM})=>(
-    <Link to="id" className="col-10 col-md-6 col-lg-3 newsCol">
+const NewsItem=({title,url,dateD,dateM,id})=>(
+    <Link to={`${id+1}`} className="col-10 col-md-6 col-lg-3 newsCol">
         <div className="newsItem">
             <div style={{position:"relative"}}>
                 <img className="img-fluid" src={url}/>

@@ -17,6 +17,9 @@ export default class Statistic extends React.Component{
 
         window.addEventListener('scroll',this.run)
     }
+    componentWillUnmount(){
+        window.removeEventListener('scroll',this.run)
+    }
     render(){
         let clsOdd="col-12 col-md-6 col-lg-3 statClsOdd text-center";
         let clsEven="col-12 col-md-6 col-lg-3 statClsEven text-center";

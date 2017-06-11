@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/667ee46532.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <title>NodeJS</title>
+    <script>
+        window.onload = function() {
+            var btn = document.getElementById('btn');
+            btn.onclick = sendData;
+            function sendData(e) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/upload');
+                var item = {
+                        title: document.getElementById('title').value,
+                        description: document.getElementById('description').value,
+                        author:document.getElementById('author').value,
+                        category:document.getElementById('category').value,
+                    }
+                    ;
+                var data = JSON.stringify(item);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.send(data);
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <div class="container-fluid">
+        <div class="row topRow justify-content-center">
+            <div class="col-8 topCol">
+                <img src="uploads/logo.png">
+                <ul class="menu">
+                    <li><a href="twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-8 topCol">
+                <a href="/home">HOME</a>
+                <a href="/contact">CONTACT</a>
+            </div>
+
+        </div>
+        <div class="row bottomRow justify-content-center">
+            <div class="col-8 topCol">
+                <h3 style="float: left">ADD NEW PROJECT</h3>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</header>
+
+
+<div id="add">
+    <div class="container">
+        <div class="row justify-content-center ">
+            <div class="col-8">
+               <div class="row addForm">
+                        <div class="col-lg-4" style="padding:5px">
+                            <a  ><img class="img-fluid" src="uploads/new.png" alt=""></a>
+                        </div>
+                        <div class="col-lg-4 fields">
+                            <input id="title" type="text"  placeholder="Title" required/></label>
+                            <input id="author" type="text"  placeholder="author" required/></label>
+                            <input id="category" type="text"  placeholder="Category" required/></label>
+                        </div>
+                        <div class="col-lg-8">
+                            <input id="description" type="text"  placeholder="Description" required/></label>
+                        </div>
+                    </div><br>
+                        <a class="btn"  href="/home" id="btn">DONE</a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="copyright">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <p class="left">Copyright 2017 Display. All Rights Reserved.</p>
+                <p class="right"> <a href="/home">HOME</a>/<a href="/contact">CONTACT</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

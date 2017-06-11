@@ -2,8 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03d28dc9-23d4-4b4b-9b56-308cffb30b2e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/React/react_proj/src/containers/NewsView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/001.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/002.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/003.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/004.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/005.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/006.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/007.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/008.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/009.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/010.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/011.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/012.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/013.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/014.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/015.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/016.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/017.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/018.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/uploads/new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/.idea/node-js-getting-started.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/.idea/preferred-vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/Procfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/data.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/file.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/js/connection_pool.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/js/displayhandler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/js/edithandler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/js/infohandler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/js/inserthandler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/js/queries.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/Contact.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/EditItem.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/Info.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/index.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/newItem.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/pages/styles/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NodeJS/node-js-getting-started/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NodeJS/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/NodeJS/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NodeJS/.idea/workspace.xml" afterPath="$PROJECT_DIR$/NodeJS/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/Lesson24/Classwork/classwork24_1/build/bundle.js" afterPath="$PROJECT_DIR$/React/Lesson24/Classwork/classwork24_1/build/bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/Lesson24/Classwork/classwork24_2/build/bundle.js" afterPath="$PROJECT_DIR$/React/Lesson24/Classwork/classwork24_2/build/bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/Lesson24/Classwork/classwork24_3/build/bundle.js" afterPath="$PROJECT_DIR$/React/Lesson24/Classwork/classwork24_3/build/bundle.js" />
@@ -49,6 +94,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/react_proj/public/styles/default.css" afterPath="$PROJECT_DIR$/React/react_proj/public/styles/default.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/react_proj/public/styles/main.css" afterPath="$PROJECT_DIR$/React/react_proj/public/styles/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/react_proj/src/actions/breakingNewsAct.js" afterPath="$PROJECT_DIR$/React/react_proj/src/actions/breakingNewsAct.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/react_proj/src/actions/sliderAct.js" afterPath="$PROJECT_DIR$/React/react_proj/src/actions/sliderAct.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/react_proj/src/components/AboutCompany.js" afterPath="$PROJECT_DIR$/React/react_proj/src/components/AboutCompany.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/react_proj/src/components/BreakingNews.js" afterPath="$PROJECT_DIR$/React/react_proj/src/components/BreakingNews.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/react_proj/src/components/Feedback.js" afterPath="$PROJECT_DIR$/React/react_proj/src/components/Feedback.js" />
@@ -57,6 +103,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/react_proj/src/components/Statistic.js" afterPath="$PROJECT_DIR$/React/react_proj/src/components/Statistic.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/react_proj/src/components/app.js" afterPath="$PROJECT_DIR$/React/react_proj/src/components/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/react_proj/src/reducers/aboutCompanyReducer.js" afterPath="$PROJECT_DIR$/React/react_proj/src/reducers/aboutCompanyReducer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/react_proj/src/reducers/sliderReducer.js" afterPath="$PROJECT_DIR$/React/react_proj/src/reducers/sliderReducer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/react_proj/src/styles/AboutCompany.css" afterPath="$PROJECT_DIR$/React/react_proj/src/styles/AboutCompany.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/react_proj/src/styles/Feedback.css" afterPath="$PROJECT_DIR$/React/react_proj/src/styles/Feedback.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/React/react_proj/src/styles/Navbar.css" afterPath="$PROJECT_DIR$/React/react_proj/src/styles/Navbar.css" />
@@ -81,23 +128,76 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/React/react_proj/src/components/app.js">
+      <file leaf-file-name="Slider.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/React/react_proj/src/components/Slider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="52" column="32" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="52" selection-end-column="32" />
+            <state relative-caret-position="242">
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="queries.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NodeJS/node-js-getting-started/js/queries.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <marker date="1497213669525" expanded="true" signature="1529:1541" ph="..." />
+                <marker date="1497213669525" expanded="true" signature="1557:2218" ph="..." />
+                <marker date="1497213669525" expanded="true" signature="1682:2182" ph="..." />
+                <marker date="1497213669525" expanded="true" signature="1738:2143" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Slider.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/React/react_proj/src/components/Slider.js">
+      <file leaf-file-name="connection_pool.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NodeJS/node-js-getting-started/js/connection_pool.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="displayhandler.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NodeJS/node-js-getting-started/js/displayhandler.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edithandler.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NodeJS/node-js-getting-started/js/edithandler.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="infohandler.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NodeJS/node-js-getting-started/js/infohandler.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inserthandler.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NodeJS/node-js-getting-started/js/inserthandler.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -106,8 +206,8 @@
       <file leaf-file-name="Statistic.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/React/react_proj/src/components/Statistic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state relative-caret-position="238">
+              <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -115,34 +215,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sliderReducer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/React/react_proj/src/reducers/sliderReducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/React/react_proj/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
+            <state relative-caret-position="561">
               <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NavbarCont.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/React/react_proj/src/containers/NavbarCont.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -155,36 +233,6 @@
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/React/react_proj/src/containers/NewsView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="breakingNewsReducer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/React/react_proj/src/reducers/breakingNewsReducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aboutCompanyReducer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/React/react_proj/src/reducers/aboutCompanyReducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -272,6 +320,7 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/NodeJS/lesson27/Classwork/classwork27_3/node_modules" />
+    <handled-path value="$PROJECT_DIR$/NodeJS/node-js-getting-started/node_modules" />
     <handled-path value="$PROJECT_DIR$/React/lesson23/Classwork/classwork23_1/node_modules" />
     <handled-path value="$PROJECT_DIR$/React/lesson23/Classwork/classwork23_2/node_modules" />
     <handled-path value="$PROJECT_DIR$/React/lesson23/Classwork/classwork23_3/node_modules" />
@@ -302,8 +351,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -444,6 +493,82 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ignite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ignite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ignite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ignite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-js-getting-started" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ignite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ignite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-js-getting-started" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ignite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ignite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NodeJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node-js-getting-started" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -459,19 +584,19 @@
     <property name="SearchEverywhereHistoryKey" value="glyphicon&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dima\Desktop\Ignite\NodeJS" />
+      <recent name="C:\Users\Dima\Desktop\Ignite\React\lesson26\Homework\homework26_3" />
+      <recent name="C:\Users\Dima\Desktop\Ignite\React\react_proj\public" />
+      <recent name="C:\Users\Dima\Desktop\Ignite\Angular\L18" />
+      <recent name="C:\Users\Dima\Desktop\Ignite\Angular\L17\Homework" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dima\Desktop\Ignite\Angular" />
       <recent name="C:\Users\Dima\Desktop\Ignite\Angular\L16\Homework" />
       <recent name="C:\Users\Dima\Desktop\Ignite\JS" />
       <recent name="C:\Users\Dima\Desktop\Ignite\L10\Homework\homework10_1" />
       <recent name="C:\Users\Dima\Desktop\Ignite\L10\Classwork" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Dima\Desktop\Ignite\React\lesson26\Homework\homework26_3" />
-      <recent name="C:\Users\Dima\Desktop\Ignite\React\react_proj\public" />
-      <recent name="C:\Users\Dima\Desktop\Ignite\Angular\L18" />
-      <recent name="C:\Users\Dima\Desktop\Ignite\Angular\L17\Homework" />
-      <recent name="C:\Users\Dima\Desktop\Ignite\Angular\L17\Classwork" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Unnamed">
@@ -597,36 +722,37 @@
       <workItem from="1495610640500" duration="440000" />
       <workItem from="1496056777400" duration="24635000" />
       <workItem from="1496120928750" duration="793000" />
+      <workItem from="1497218280718" duration="657000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53172000" />
+    <option name="totallyTimeSpent" value="53829000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1380" height="742" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1380" height="742" extended-state="7" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24089219" sideWeight="0.8636364" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24089219" sideWeight="0.8636364" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24231333" sideWeight="0.13636364" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -650,53 +776,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/React/lesson26/Homework/homework26_1/src/reducers/todos.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/React/lesson26/Homework/homework26_2/src/actions/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/React/lesson26/Homework/homework26_2/src/reducers/todos.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/React/react_proj/src/actions/breakingNewsAct.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/React/react_proj/src/components/KeepInTouch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/React/react_proj/src/components/Feedback.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="38" column="47" lean-forward="false" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/React/react_proj/public/js/build/bundle.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-47880">
           <caret line="659" column="469" lean-forward="false" selection-start-line="659" selection-start-column="463" selection-end-line="659" selection-end-column="469" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -884,9 +967,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-          <folding>
-            <element signature="e#1#40#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -933,16 +1013,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <marker date="1496091827396" expanded="true" signature="1010:1039" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/React/react_proj/src/reducers/breakingNewsReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="24" />
+          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -965,7 +1042,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/React/react_proj/src/components/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
+        <state relative-caret-position="629">
           <caret line="52" column="32" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="52" selection-end-column="32" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -1003,7 +1080,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/React/react_proj/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
+        <state relative-caret-position="561">
           <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
           <folding />
         </state>
@@ -1011,8 +1088,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/React/react_proj/src/components/Statistic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="238">
+          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -1022,7 +1099,60 @@
     <entry file="file://$PROJECT_DIR$/React/react_proj/src/components/Slider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NodeJS/node-js-getting-started/js/displayhandler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NodeJS/node-js-getting-started/js/edithandler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NodeJS/node-js-getting-started/js/infohandler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NodeJS/node-js-getting-started/js/inserthandler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NodeJS/node-js-getting-started/js/queries.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1497213669525" expanded="true" signature="1529:1541" ph="..." />
+            <marker date="1497213669525" expanded="true" signature="1557:2218" ph="..." />
+            <marker date="1497213669525" expanded="true" signature="1682:2182" ph="..." />
+            <marker date="1497213669525" expanded="true" signature="1738:2143" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NodeJS/node-js-getting-started/js/connection_pool.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

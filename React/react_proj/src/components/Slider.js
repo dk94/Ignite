@@ -13,25 +13,36 @@ export default class Slider extends React.Component{
     }
 
     componentDidMount() {
+
          console.log(this.props.autoSwitchFlag+" fromDidmount");
-        if(this.props.autoSwitchFlag){
-        setInterval(() => {
+        if(this.props.autoSwitchFlag&&!this.interval){
+        this.interval=setInterval(() => {
             if (this.props.autoSwitchFlag) {
                 this.props.autoSwitch();
+
             }
-        }, this.props.switchTime*1000);
+        }, 3000);
         }
+
+
 
 
 
     }
     componentDidUpdate() {
+        if (!this.props.autoSwitchFlag) {
+        this.timeout=setTimeout(() => {
 
-        setTimeout(() => {
-            if (!this.props.autoSwitchFlag) {
                 this.props.setFlag();
-            }
+
         },6000);
+    }
+
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.interval);
+        clearTimeout(this.timeout);
     }
 render(){
     return(

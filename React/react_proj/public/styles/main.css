@@ -12,7 +12,8 @@ header .mainMenu a:focus{  border-bottom:2px solid #00e1ff!important;
     color: #00e1ff!important }
 header .mainMenu a:hover{
     border-bottom:2px solid #00e1ff!important;
-    color: #00e1ff!important
+    color: #00e1ff!important;
+    padding-bottom:18px;
 
 }
 header>nav{background-color:#44433e;}
@@ -130,7 +131,7 @@ header .logo{
 .MsgFeed{
 
     min-height: 40px;
-    font-size: x-small;
+    font-size: small;
 
 }
 .AddMsgTitle{
@@ -229,7 +230,7 @@ header .logo{
     border:1px solid gray;
 
     padding:10px 0;
-    font-size:0.6em;
+    font-size:0.75em;
 }
 .portfolioColActive{
 
@@ -312,7 +313,7 @@ header .logo{
 section{padding-top:30px;padding-bottom: 30px;}
 body{overflow-x:hidden}
 
-.menuAbout{color:white; font-size:x-small; margin-top:60px;}
+.menuAbout{color:white;font-size: 1.2em;; margin-top:60px;}
 .menuAboutAct{color:#17CFAB; border-top:1px solid #17CFAB}
 
 .history{

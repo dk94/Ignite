@@ -38,6 +38,7 @@ const sliderReducer = (state = {
                 index: state.index,
                 autoSwitchFlag:true,
             }
+
         default: {
             return state
         }
